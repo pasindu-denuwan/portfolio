@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasindu Denuwan | Portfolio</title>
+  <meta name="description"
+    content="Official portfolio of Pasindu Denuwan - B.Sc (Hons) in Computing and Information Systems undergraduate at Sabaragamuwa University of Sri Lanka . Explore projects, skills, education, experience, and certifications.">
+  <meta name="author" content="Pasindu Denuwan">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Pasindu Denuwan | Portfolio & Profile">
+  <meta property="og:description"
+    content="Data & Technology Enthusiast | Undergraduate at Sabaragamuwa University of Sri Lanka.">
+  <meta property="og:type" content="website">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Animated Loading Screen: Pasindu Denuwan (Fluid Website Motion) -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-fluid-bg" aria-hidden="true">
+      <div class="preloader-blob preloader-blob-1"></div>
+      <div class="preloader-blob preloader-blob-2"></div>
+      <div class="preloader-blob preloader-blob-3"></div>
+    </div>
+    <div class="preloader-content">
+      <h1 class="preloader-title">
+        <span class="preloader-first">Pasindu</span>
+        <span class="preloader-last">Denuwan</span>
+      </h1>
+      <div class="preloader-line"></div>
+    </div>
+  </div>
+
+  <!-- Ambient Glowing Background Elements -->
+  <div class="bg-glow-container" aria-hidden="true">
+    <div class="bg-glow-blob blob-1"></div>
+    <div class="bg-glow-blob blob-2"></div>
+    <div class="bg-glow-blob blob-3"></div>
+  </div>
+
+  <!-- Top Sticky Navigation -->
+  <header class="top-nav" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand" id="nav-brand-link">
+        <div class="nav-brand-icon">PD</div>
+        <span id="nav-brand-name">Pasindu Denuwan</span>
+      </a>
+
+      <nav class="nav-menu-wrapper">
+        <ul id="nav-menu" class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <a href="#contact" class="btn btn-gradient btn-sm nav-cta-btn">Let's Talk</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars" id="hamburger-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main id="main-content">
+
+    <!-- 1. Home / Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-container">
+          <div class="hero-text">
+            <div class="hero-greeting">
+              <span class="pulse-dot"></span>
+              <span id="hero-greeting-text">AVAILABLE FOR INTERNSHIPS</span>
+            </div>
+            <h1 class="hero-title">
+              <span id="hero-first-name">Pasindu</span> <span id="hero-last-name" class="gradient-text">Denuwan</span>
+            </h1>
+            <h2 class="hero-subtitle" id="hero-title-text">Data & Technology Enthusiast</h2>
+            <p class="hero-desc" id="hero-bio-text">
+              An enthusiastic undergraduate pursuing a B.Sc (Hons) in Computing and Information Systems at
+              Sabaragamuwa University of Sri Lanka, passionate about learning Python, SQL, and data science to create
+              meaningful data-driven insights.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-gradient">
+                <span>View Projects</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="resume.pdf" class="btn btn-outline" id="hero-resume-btn" download target="_blank">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span>Download CV</span>
+              </a>
+            </div>
+
+            <div class="hero-socials" id="hero-socials-container">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-glow-bg"></div>
+            <div class="hero-avatar-frame">
+              <img src="assets/avatar.png" alt="Pasindu Denuwan Portrait" id="hero-avatar-img"
+                onerror="this.src='https://placehold.co/600x600/161626/c471ed?text=Pasindu+Denuwan'">
+            </div>
+            <div class="hero-floating-card">
+              <div class="card-role">Undergraduate</div>
+              <div class="card-degree">B.Sc (Hons) in CIS</div>
+              <div class="card-uni">Sabaragamuwa University of Sri Lanka</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About Me Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ABOUT ME</span>
+          <h2 id="about-heading">Driven by Technology, Inspired by Data</h2>
+          <p class="section-subtitle">A glimpse into my academic focus, core values, and background</p>
+        </div>
+
+        <p class="about-intro-text" id="about-description">
+          Currently pursuing my B.Sc (Hons) in Computing and Information Systems undergraduate of Faculty of Computing
+          at Sabaragamuwa University of Sri Lanka. My focus lies in combining software engineering fundamentals—such as
+          Python, Java, C++, and database design—with data analytics tools like SQL query optimization, Excel, and Power
+          BI to extract actionable insights.
+        </p>
+
+        <!-- Highlights Metric Badges -->
+        <div class="highlights-grid" id="about-highlights-container">
+          <!-- Rendered via JS -->
+        </div>
+
+        <!-- Core Values Cards -->
+        <div class="core-values-grid" id="about-values-container">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Skills Section -->
+    <section id="skills" class="section" style="background: rgba(255,255,255,0.01);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">MY EXPERTISE</span>
+          <h2>Technical & Professional Skills</h2>
+          <p class="section-subtitle">Proficiencies cultivated through academic coursework, certifications, and hands-on
+            projects</p>
+        </div>
+
+        <div class="skills-grid" id="skills-container">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">PORTFOLIO</span>
+          <h2>Featured Projects</h2>
+          <p class="section-subtitle">Practical applications spanning software development, database systems, and data
+            analytics</p>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div class="projects-controls">
+          <div class="category-filters" id="project-filters">
+            <button class="filter-btn active" data-category="all">All Projects</button>
+            <button class="filter-btn" data-category="Software Engineering">Software Engineering</button>
+            <button class="filter-btn" data-category="Web Engineering">Web Engineering</button>
+            <button class="filter-btn" data-category="Data Analytics">Data Analytics</button>
+          </div>
+
+          <div class="project-search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="project-search" class="project-search-input"
+              placeholder="Search projects by keyword, tech...">
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-container">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Education Section -->
+    <section id="education" class="section" style="background: rgba(255,255,255,0.01);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ACADEMICS</span>
+          <h2>Education Journey</h2>
+          <p class="section-subtitle">Academic foundations, university degree program, and specialized technical tracks
+          </p>
+        </div>
+
+        <div class="timeline-container" id="education-timeline-container">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">EXPERIENCE & LEADERSHIP</span>
+          <h2>Leadership & Extracurricular Activities</h2>
+          <p class="section-subtitle">Roles in governance, student organizations, event management, and athletics</p>
+        </div>
+
+        <div class="timeline-container" id="experience-timeline-container">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Certifications Section -->
+    <section id="certifications" class="section" style="background: rgba(255,255,255,0.01);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">QUALIFICATIONS</span>
+          <h2>Certifications & Courses</h2>
+          <p class="section-subtitle">Continuous professional development verified by accredited universities and
+            technical platforms</p>
+        </div>
+
+        <div class="cert-grid" id="certifications-container">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Achievements Section -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">HONORS</span>
+          <h2>Milestones & Recognitions</h2>
+          <p class="section-subtitle">Key achievements and leadership milestones from collegiate journey</p>
+        </div>
+
+        <div class="achieve-grid" id="achievements-container">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Resume Download Section -->
+    <section id="resume" class="section" style="background: rgba(255,255,255,0.01);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CURRICULUM VITAE</span>
+          <h2>Resume Download</h2>
+          <p class="section-subtitle">Complete summary of academic credentials, technical skills, and background</p>
+        </div>
+
+        <div class="resume-container-card">
+          <div class="resume-details">
+            <span class="badge" style="margin-bottom: 1rem;"><i class="fa-solid fa-circle-check"></i> Updated for
+              2025</span>
+            <h3>Pasindu Denuwan's Official CV</h3>
+            <p>
+              Looking for a comprehensive overview of my academic background, technical competencies in Python and SQL,
+              project contributions, and extracurricular leadership? Download my curriculum vitae below.
+            </p>
+
+            <div class="resume-highlights-list">
+              <div class="resume-item"><i class="fa-solid fa-check"></i> B.Sc (Hons) in CIS Student</div>
+              <div class="resume-item"><i class="fa-solid fa-check"></i> Python & SQL Proficiency</div>
+              <div class="resume-item"><i class="fa-solid fa-check"></i> Verified Certifications</div>
+              <div class="resume-item"><i class="fa-solid fa-check"></i> Academic Reference Included</div>
+            </div>
+
+            <a href="resume.pdf" class="btn btn-primary" id="section-resume-download-btn" download target="_blank">
+              <i class="fa-solid fa-download"></i> Download Resume (PDF)
+            </a>
+          </div>
+
+          <div class="resume-preview-box">
+            <i class="fa-solid fa-file-pdf resume-preview-icon"></i>
+            <h4 style="margin-bottom: 0.4rem;">Pasindu_Denuwan_Resume.pdf</h4>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">PDF Document • English •
+              Verified</p>
+            <a href="resume.pdf" target="_blank" class="btn btn-sm btn-outline">
+              <i class="fa-solid fa-eye"></i> View Online
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Contact & Academic Reference Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2>Contact & Reference</h2>
+          <p class="section-subtitle">Reach out directly for internship opportunities, academic inquiries, or
+            collaborative projects</p>
+        </div>
+
+        <div class="contact-layout-grid">
+          <!-- Left Column: Contact Channels & Academic Reference Card -->
+          <div class="contact-info-column">
+            <div class="contact-cards-stack" id="contact-details-container">
+              <!-- Rendered via JS -->
+            </div>
+
+            <!-- Academic Reference Card -->
+            <div class="reference-card" id="academic-reference-card">
+              <div class="reference-header">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h4>Academic Reference</h4>
+              </div>
+              <div class="reference-name" id="ref-name">Dr. (Ms). Chathumi Kavirathna</div>
+              <div class="reference-role" id="ref-designation">Senior Lecturer Grade II • University of Kelaniya</div>
+              <div class="reference-contact-links">
+                <a href="mailto:chathumi@kln.ac.lk" id="ref-email"><i class="fa-solid fa-envelope"></i>
+                  chathumi@kln.ac.lk</a>
+                <a href="tel:+94764230976" id="ref-phone"><i class="fa-solid fa-phone"></i> +94 76 423 0976</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-container">
+            <h3 style="margin-bottom: 0.5rem;">Send a Message</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.75rem;">
+              Fill in your details and message below. I will respond to your inquiry promptly.
+            </p>
+
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name">Your Full Name *</label>
+                  <input type="text" id="form-name" class="form-control" placeholder="e.g. Kamal Perera" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-email">Your Email Address *</label>
+                  <input type="email" id="form-email" class="form-control" placeholder="e.g. Kamal@example.com"
+                    required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject">Subject</label>
+                <input type="text" id="form-subject" class="form-control"
+                  placeholder="e.g. Internship Inquiry / Collaboration">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">Message *</label>
+                <textarea id="form-message" class="form-control" placeholder="Write your message here..."
+                  required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="form-submit-btn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Pasindu <span class="gradient-text">Denuwan</span></h3>
+          <p>B.Sc (Hons) in Computing and Information Systems undergraduate • Sabaragamuwa University of Sri Lanka</p>
+        </div>
+        <div class="hero-socials" id="footer-socials">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span id="current-year">2026</span> Pasindu Denuwan. All rights reserved. </div>
+        <div><a href="admin.html" style="color: var(--text-muted); font-size: 0.8rem;"><i class="fa-solid fa-lock"></i>
+            CMS Admin</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">&times;</button>
+      <div id="modal-dynamic-content">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Main JavaScript Engine & 3D Tech Matrix -->
+  <script src="js/main.js"></script>
+  <script src="js/tech-3d.js"></script>
+</body>
+
+</html>

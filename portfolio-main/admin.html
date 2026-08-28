@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Content Manager (Admin CMS)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .notice-banner {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #f59e0b;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background Animated Glow -->
+  <div class="bg-glow-container" aria-hidden="true">
+    <div class="bg-glow-blob blob-1"></div>
+    <div class="bg-glow-blob blob-2"></div>
+  </div>
+
+  <header class="top-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <i class="fa-solid fa-arrow-left" style="font-size: 1rem; margin-right: 0.3rem;"></i>
+        <span>Back to Portfolio</span>
+      </a>
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-container">
+    <div class="admin-header">
+      <div>
+        <h1 style="font-size: 2.25rem;">Content <span class="gradient-text">CMS Admin</span></h1>
+        <p style="color: var(--text-secondary); margin-top: 0.25rem;">Manage your portfolio entries and export an
+          updated <code>content.json</code> file.</p>
+      </div>
+
+      <button id="download-json-btn" class="btn btn-primary">
+        <i class="fa-solid fa-download"></i> Download updated content.json
+      </button>
+    </div>
+
+    <div class="notice-banner">
+      <i class="fa-solid fa-triangle-exclamation" style="font-size: 1.5rem; flex-shrink: 0;"></i>
+      <div>
+        <strong>Local Editing Tool — Not linked from public navigation.</strong><br>
+        Changes made here update your session in real time. Click <strong>"Download updated content.json"</strong>,
+        replace <code>/data/content.json</code> in your local folder, and commit to GitHub to publish your updates.
+      </div>
+    </div>
+
+    <!-- Admin Navigation Tabs -->
+    <div class="admin-tabs" id="admin-tabs">
+      <button class="admin-tab-btn active" data-tab="projects"><i class="fa-solid fa-diagram-project"></i>
+        Projects</button>
+      <button class="admin-tab-btn" data-tab="experience"><i class="fa-solid fa-briefcase"></i> Experience</button>
+      <button class="admin-tab-btn" data-tab="education"><i class="fa-solid fa-graduation-cap"></i> Education</button>
+      <button class="admin-tab-btn" data-tab="certifications"><i class="fa-solid fa-certificate"></i>
+        Certifications</button>
+      <button class="admin-tab-btn" data-tab="achievements"><i class="fa-solid fa-trophy"></i> Achievements</button>
+      <button class="admin-tab-btn" data-tab="skills"><i class="fa-solid fa-code"></i> Skills</button>
+      <button class="admin-tab-btn" data-tab="profile"><i class="fa-solid fa-user"></i> Profile & Reference</button>
+    </div>
+
+    <!-- Tab 1: Projects Manager -->
+    <div class="tab-content" id="tab-projects">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h3>Projects Catalog</h3>
+        <button id="add-project-btn" class="btn btn-sm btn-outline"><i class="fa-solid fa-plus"></i> Add New
+          Project</button>
+      </div>
+      <div class="admin-card-list" id="admin-projects-list"></div>
+    </div>
+
+    <!-- Tab 2: Experience Manager -->
+    <div class="tab-content" id="tab-experience" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h3>Experience & Leadership Timeline</h3>
+        <button id="add-experience-btn" class="btn btn-sm btn-outline"><i class="fa-solid fa-plus"></i> Add Experience
+          Entry</button>
+      </div>
+      <div class="admin-card-list" id="admin-experience-list"></div>
+    </div>
+
+    <!-- Tab 3: Education Manager -->
+    <div class="tab-content" id="tab-education" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h3>Education & Academic Timeline</h3>
+        <button id="add-education-btn" class="btn btn-sm btn-outline"><i class="fa-solid fa-plus"></i> Add Education
+          Entry</button>
+      </div>
+      <div class="admin-card-list" id="admin-education-list"></div>
+    </div>
+
+    <!-- Tab 4: Certifications Manager -->
+    <div class="tab-content" id="tab-certifications" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h3>Certifications List</h3>
+        <button id="add-cert-btn" class="btn btn-sm btn-outline"><i class="fa-solid fa-plus"></i> Add
+          Certification</button>
+      </div>
+      <div class="admin-card-list" id="admin-cert-list"></div>
+    </div>
+
+    <!-- Tab 5: Achievements Manager -->
+    <div class="tab-content" id="tab-achievements" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h3>Milestones & Achievements</h3>
+        <button id="add-achieve-btn" class="btn btn-sm btn-outline"><i class="fa-solid fa-plus"></i> Add
+          Achievement</button>
+      </div>
+      <div class="admin-card-list" id="admin-achieve-list"></div>
+    </div>
+
+    <!-- Tab 6: Skills Manager -->
+    <div class="tab-content" id="tab-skills" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h3>Technical & Soft Skills</h3>
+      </div>
+      <div class="admin-card-list" id="admin-skills-list"></div>
+    </div>
+
+    <!-- Tab 7: Profile & Reference Manager -->
+    <div class="tab-content" id="tab-profile" style="display: none;">
+      <div class="glass-card" style="max-width: 850px; padding: 2.5rem;">
+        <h3 style="margin-bottom: 1.5rem;">Edit Personal Details & Academic Reference</h3>
+        <form id="profile-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prof-name">Full Name</label>
+              <input type="text" id="prof-name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="prof-title">Target Role / Title</label>
+              <input type="text" id="prof-title" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top: 1rem;">
+            <label for="prof-bio">Short Bio</label>
+            <textarea id="prof-bio" class="form-control" rows="3" required></textarea>
+          </div>
+
+          <div class="form-row" style="margin-top: 1rem;">
+            <div class="form-group">
+              <label for="prof-email">Email Address</label>
+              <input type="email" id="prof-email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="prof-phone">Phone Number</label>
+              <input type="text" id="prof-phone" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-row" style="margin-top: 1rem;">
+            <div class="form-group">
+              <label for="prof-location">Location</label>
+              <input type="text" id="prof-location" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="prof-availability">Availability Tag</label>
+              <input type="text" id="prof-availability" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-row" style="margin-top: 1rem;">
+            <div class="form-group">
+              <label for="prof-github">GitHub Profile URL</label>
+              <input type="url" id="prof-github" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="prof-linkedin">LinkedIn Profile URL</label>
+              <input type="url" id="prof-linkedin" class="form-control">
+            </div>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--border-color); margin: 2rem 0;">
+
+          <h4 style="margin-bottom: 1rem; color: var(--accent-blue);">Academic Reference Information</h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ref-input-name">Referee Full Name</label>
+              <input type="text" id="ref-input-name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="ref-input-desig">Designation</label>
+              <input type="text" id="ref-input-desig" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-row" style="margin-top: 1rem;">
+            <div class="form-group">
+              <label for="ref-input-inst">Institution</label>
+              <input type="text" id="ref-input-inst" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="ref-input-email">Referee Email</label>
+              <input type="email" id="ref-input-email" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top: 1rem;">
+            <label for="ref-input-phone">Referee Phone</label>
+            <input type="text" id="ref-input-phone" class="form-control">
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 1.75rem;">
+            <i class="fa-solid fa-floppy-disk"></i> Save Profile & Reference Details
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Edit / Add Modal Form -->
+  <div class="modal-overlay" id="admin-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="admin-modal-close">&times;</button>
+      <h2 id="modal-title" style="margin-bottom: 1.5rem;">Edit Entry</h2>
+      <form id="admin-entry-form">
+        <div id="dynamic-form-fields"></div>
+        <div style="display: flex; gap: 1rem; justify-content: flex-end; margin-top: 1.75rem;">
+          <button type="button" class="btn btn-secondary" id="modal-cancel-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i> Save Item</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Admin JavaScript Logic & 3D Tilt -->
+  <script src="js/admin.js"></script>
+  <script src="js/tech-3d.js"></script>
+</body>
+
+</html>

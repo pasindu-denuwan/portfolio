@@ -1,0 +1,286 @@
+{
+  "profile": {
+    "name": "Pasindu Denuwan",
+    "title": "Data & Technology Enthusiast | Undergraduate",
+    "tagline": "Passionate about learning Python, SQL, and data science to gain practical experience and create meaningful data-driven insights.",
+    "bio": "An enthusiastic undergraduate pursuing a B.Sc (Hons) in Computing and Information Systems at the Faculty of Computing, Sabaragamuwa University of Sri Lanka, with a growing interest in data science, software engineering, and analytics. Passionate about learning Python and SQL and continuously improving skills to gain practical experience and create meaningful data-driven insights.",
+    "location": "Sabaragamuwa / Colombo, Sri Lanka",
+    "email": "pasindudenuwan@gmail.com",
+    "phone": "+94 76 947 6496",
+    "github": "https://github.com/pasindu-denuwan",
+    "linkedin": "https://linkedin.com/in/pasindu-denuwan",
+    "twitter": "",
+    "resumePath": "resume.pdf",
+    "availability": "Open for Internships & Data/Tech Roles (Undergraduate 2025 - Present)",
+    "languages": [
+      "English (Professional proficiency)",
+      "Sinhala (Native proficiency)"
+    ],
+    "reference": {
+      "name": "Ms. Kumudu Kauwshalya",
+      "designation": "Senior Lecturer Grade II",
+      "institution": "Sabaragamuwa University of Sri Lanka",
+      "phone": "+94 76 423 0976",
+      "email": "Kaushalya@gmail.com"
+    }
+  },
+  "about": {
+    "heading": "Driven by Technology, Inspired by Data",
+    "description": "Currently pursuing my B.Sc (Hons) in Computing and Information Systems at the Faculty of Computing, Sabaragamuwa University of Sri Lanka. My focus lies in combining software engineering fundamentals—such as Python, Java, C++, and database design—with data analytics tools like SQL query optimization, Excel, and Power BI to extract actionable insights.",
+    "highlights": [
+      { "number": "2025", "label": "B.Sc (Hons) CIS Entry" },
+      { "number": "4+", "label": "Certifications Earned" },
+      { "number": "4+", "label": "Academic Projects" },
+      { "number": "2", "label": "Languages (EN / SI)" }
+    ],
+    "coreValues": [
+      {
+        "title": "Data-Driven Analytics",
+        "description": "Leveraging Python and SQL to query datasets, optimize database structures, and derive practical insights."
+      },
+      {
+        "title": "Continuous Learning",
+        "description": "Actively expanding technical competencies in Power BI, data science, and modern web software development."
+      },
+      {
+        "title": "Collaborative Leadership",
+        "description": "Demonstrating teamwork, communication, and leadership built through academic projects and student governance."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "category": "Technical Skills",
+      "items": [
+        { "name": "Python Programming", "level": 88 },
+        { "name": "SQL Query Optimization", "level": 85 },
+        { "name": "Database Design", "level": 84 },
+        { "name": "C++ Programming", "level": 78 },
+        { "name": "Java", "level": 75 },
+        { "name": "Microsoft Excel (Advanced)", "level": 90 },
+        { "name": "Power BI (Reading)", "level": 72 }
+      ]
+    },
+    {
+      "category": "Soft Skills",
+      "items": [
+        { "name": "Problem Solving", "level": 95 },
+        { "name": "Critical Thinking", "level": 92 },
+        { "name": "Communication Skills", "level": 90 },
+        { "name": "Continuous Learning Mindset", "level": 96 },
+        { "name": "Leadership", "level": 88 },
+        { "name": "Excellent Teamwork", "level": 94 }
+      ]
+    },
+    {
+      "category": "Languages & Governance",
+      "items": [
+        { "name": "English (Professional)", "level": 90 },
+        { "name": "Sinhala (Native)", "level": 100 },
+        { "name": "Team Leadership & Coordination", "level": 88 },
+        { "name": "Event & Club Management", "level": 85 }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "Object Oriented Programming Application",
+      "subtitle": "Java Online Bookstore Booking System",
+      "category": "Software Engineering",
+      "description": "Developed a Java-based online booking system for a bookstore, incorporating core OOP concepts and database management.",
+      "contribution": "Architected class hierarchies (encapsulation, inheritance, polymorphism), designed database schemas for book reservation, and built session management workflows.",
+      "technologies": ["Java", "OOP", "Database Design", "SQL"],
+      "github": "https://github.com/pasindu-denuwan/OOP-Bookstore-System",
+      "demo": "",
+      "image": "assets/project1.png",
+      "featured": true
+    },
+    {
+      "id": "proj-2",
+      "title": "Pong Game",
+      "subtitle": "C++ Arcade Game with Real-Time Control",
+      "category": "Software Engineering",
+      "description": "Created a classic Pong arcade game in C++ with real-time paddle movement, collision physics, and dynamic score tracking as part of a university group project.",
+      "contribution": "Engineered game loop architecture, real-time keyboard event handlers, ball-bounce physics algorithms, and score state rendering.",
+      "technologies": ["C++", "Game Logic", "Data Structures", "OOP"],
+      "github": "https://github.com/pasindu-denuwan/CPP-Pong-Game",
+      "demo": "",
+      "image": "assets/project2.png",
+      "featured": true
+    },
+    {
+      "id": "proj-3",
+      "title": "Task Management System",
+      "subtitle": "Collaborative Team Productivity Application",
+      "category": "Web Engineering",
+      "description": "A full-stack task management system designed to simplify team collaboration, project organization, and real-time task tracking.",
+      "contribution": "Designed the database schema, built REST APIs for task assignments and status updates, and developed clean UI components.",
+      "technologies": ["JavaScript", "React", "PostgreSQL", "Node.js", "Tailwind CSS"],
+      "github": "https://github.com/pasindu-denuwan",
+      "demo": "",
+      "image": "assets/doit.png",
+      "featured": true
+    },
+    {
+      "id": "proj-4",
+      "title": "Student Performance Data Analysis",
+      "subtitle": "Predictive Analytics & Performance Modeling",
+      "category": "Data Analytics",
+      "description": "Applied exploratory data analysis (EDA) and predictive modeling to evaluate student academic performance trends using Python and statistical analysis.",
+      "contribution": "Performed data cleaning, feature engineering, correlation analysis, and created visual insight reports.",
+      "technologies": ["Python", "Pandas", "Matplotlib", "SQL", "Excel"],
+      "github": "https://github.com/pasindu-denuwan",
+      "demo": "",
+      "image": "assets/project4.png",
+      "featured": false
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "institution": "Sabaragamuwa University of Sri Lanka",
+      "degree": "B.Sc (Hons) in Computing and Information Systems",
+      "period": "Jan 2025 - Present",
+      "gpa": "Undergraduate",
+      "location": "Belihuloya, Sri Lanka",
+      "highlights": [
+        "Faculty of Computing • Specializing in Computing, Data Analytics, Database Management, and Software Engineering.",
+        "Developing group academic projects focusing on OOP principles, database design, and real-time applications."
+      ]
+    },
+    {
+      "id": "edu-2",
+      "institution": "University of Moratuwa",
+      "degree": "Python Programming",
+      "period": "2025 (Reading)",
+      "gpa": "Certification Track",
+      "location": "Moratuwa, Sri Lanka",
+      "highlights": [
+        "Hands-on study of Python core concepts, standard libraries, object orientation, and data structures."
+      ]
+    },
+    {
+      "id": "edu-3",
+      "institution": "Microsoft - Simplilearn",
+      "degree": "Power BI for Beginners",
+      "period": "2025 (Reading)",
+      "gpa": "Certification Track",
+      "location": "Online Learning",
+      "highlights": [
+        "Building interactive reports, data modeling techniques, DAX measures, and executive dashboard visuals."
+      ]
+    },
+    {
+      "id": "edu-4",
+      "institution": "Govt. Science College Matale",
+      "degree": "Physical Science Stream (G.C.E. Advanced Level)",
+      "period": "2020 - 2022",
+      "gpa": "Pass",
+      "location": "Matale, Sri Lanka",
+      "highlights": [
+        "Focused on Combined Mathematics, Physics, and Chemistry.",
+        "Appointed School Prefect and served as Committee Member for the School Science Club."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "School Prefect",
+      "company": "Govt. Science College Matale",
+      "period": "2021 - 2022",
+      "location": "Matale, Sri Lanka",
+      "type": "Leadership & Governance",
+      "description": [
+        "Maintained student discipline, organized school assembly events, and represented student interests to college management.",
+        "Cultivated key interpersonal skills including team coordination, public speaking, conflict resolution, and leadership."
+      ]
+    },
+    {
+      "id": "exp-2",
+      "role": "Committee Member - Science Club",
+      "company": "Govt. Science College Matale",
+      "period": "2020 - 2022",
+      "location": "Matale, Sri Lanka",
+      "type": "Academic Extracurricular",
+      "description": [
+        "Co-organized collegiate science fairs, inter-school knowledge quizzes, and STEM awareness sessions.",
+        "Managed publicity, event schedules, and logistics in collaboration with faculty advisors."
+      ]
+    },
+    {
+      "id": "exp-3",
+      "role": "Member of School Netball Team",
+      "company": "Govt. Science College Matale",
+      "period": "2020 - 2022",
+      "location": "Matale, Sri Lanka",
+      "type": "Sports & Athletics",
+      "description": [
+        "Competed in inter-school and zonal tournaments, demonstrating strategic positioning, discipline, and sportsmanship.",
+        "Fostered strong team synergy and resilience under high-pressure competitive environments."
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "title": "Python for Beginners",
+      "issuer": "University of Moratuwa",
+      "year": "2025",
+      "credentialId": "UOM-PY-2025",
+      "url": "https://open.uom.lk",
+      "icon": "fa-brands fa-python"
+    },
+    {
+      "id": "cert-2",
+      "title": "OOP in Python",
+      "issuer": "Coddy",
+      "year": "2025",
+      "credentialId": "CODDY-OOP-2025",
+      "url": "https://coddy.tech",
+      "icon": "fa-solid fa-code"
+    },
+    {
+      "id": "cert-3",
+      "title": "SQL (Basic)",
+      "issuer": "HackerRank",
+      "year": "2025",
+      "credentialId": "HR-SQL-BASIC",
+      "url": "https://www.hackerrank.com/certificates",
+      "icon": "fa-solid fa-database"
+    },
+    {
+      "id": "cert-4",
+      "title": "Web Design for Beginners",
+      "issuer": "University of Moratuwa",
+      "year": "2025",
+      "credentialId": "UOM-WD-2025",
+      "url": "https://open.uom.lk",
+      "icon": "fa-solid fa-laptop-code"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "ach-1",
+      "title": "Appointed School Prefect",
+      "issuer": "Govt. Science College Matale",
+      "year": "2021",
+      "description": "Awarded official prefectship badge in recognition of leadership, high moral standing, and academic dedication."
+    },
+    {
+      "id": "ach-2",
+      "title": "School Sports Representation",
+      "issuer": "Govt. Science College Matale",
+      "year": "2020 - 2022",
+      "description": "Represented the college in zonal championships with distinction."
+    },
+    {
+      "id": "ach-3",
+      "title": "Science Club Executive Committee",
+      "issuer": "Govt. Science College Matale",
+      "year": "2020 - 2022",
+      "description": "Organized annual science exhibitions and academic competitions for high school students."
+    }
+  ]
+}
