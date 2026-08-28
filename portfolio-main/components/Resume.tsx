@@ -15,7 +15,7 @@ export default function Resume() {
         <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
           Want to know more about my skills, education and projects? Download my updated CV.
         </p>
-        <a href="/portfolio/resume.pdf" target="_blank" className="btn btn-gradient inline-flex items-center gap-2 bg-gradient-to-r from-primary to-accent text-dark font-bold px-8 py-4 rounded-xl hover:shadow-[0_0_20px_rgba(193,232,255,0.5)] transition-all">
+        <a href="/portfolio/resume.pdf" target="_blank" className="btn btn-gradient inline-flex items-center gap-2 bg-gradient-to-r from-primary to-accent text-dark font-bold px-8 py-4 rounded-xl hover:shadow-[0_0_20px_rgba(171,210,250,0.5)] transition-all">
           <Download className="w-5 h-5" /> Download CV
         </a>
       </motion.div>

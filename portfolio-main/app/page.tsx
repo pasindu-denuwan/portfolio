@@ -18,12 +18,12 @@ export default function Home() {
       <Preloader />
       {/* Absolute Background */}
       <div className="fixed inset-0 z-0">
-        <Velaris 
-          bg="#021024" 
-          colors={["#052659", "#5483B3", "#7DA0CA", "#C1E8FF"]} 
-          speed={1.5} 
-          grain={0.15} 
-          height="100vh" 
+        <Velaris
+          bg="#091540"
+          colors={["#091540", "#1B2CC1", "#7692FF", "#ABD2FA"]}
+          speed={2.5}
+          grain={0.15}
+          height="100vh"
         />
       </div>
 

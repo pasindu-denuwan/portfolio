@@ -61,7 +61,7 @@ export default function Achievements() {
       <div 
         className="absolute inset-0 pointer-events-none z-[-1]"
         style={{
-          background: "radial-gradient(circle at 50% 40%, rgba(84, 131, 179, 0.12), transparent 50%)"
+          background: "radial-gradient(circle at 50% 40%, rgba(27, 44, 193, 0.15), transparent 50%)"
         }}
       />
       

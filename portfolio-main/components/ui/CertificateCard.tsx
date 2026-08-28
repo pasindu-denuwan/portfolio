@@ -58,7 +58,7 @@ export default function CertificateCard({ certificate, isExpanded, onToggle }: C
   };
 
   // We use Framer Motion's useMotionTemplate to construct the radial gradient string dynamically
-  const spotlightBackground = useMotionTemplate`radial-gradient(circle at ${spotlightX}px ${spotlightY}px, rgba(193, 232, 255, 0.12), transparent 55%)`;
+  const spotlightBackground = useMotionTemplate`radial-gradient(circle at ${spotlightX}px ${spotlightY}px, rgba(171, 210, 250, 0.15), transparent 55%)`;
 
   return (
     <motion.div
@@ -71,8 +71,8 @@ export default function CertificateCard({ certificate, isExpanded, onToggle }: C
         rotateX: isExpanded ? rotateX : 0,
         rotateY: isExpanded ? rotateY : 0,
         transformPerspective: 1000,
-        border: "1px solid rgba(193, 232, 255, 0.16)",
-        boxShadow: "0 12px 35px rgba(2, 16, 36, 0.35)",
+        border: "1px solid rgba(171, 210, 250, 0.16)",
+        boxShadow: "0 12px 35px rgba(9, 21, 64, 0.35)",
       }}
       className="relative w-full aspect-video rounded-[20px] overflow-hidden cursor-pointer bg-dark"
     >
@@ -112,11 +112,11 @@ export default function CertificateCard({ certificate, isExpanded, onToggle }: C
         <div 
           className="w-[92%] p-4 rounded-[16px] text-center"
           style={{
-             background: "rgba(2, 16, 36, 0.58)",
+             background: "rgba(9, 21, 64, 0.65)",
              backdropFilter: "blur(14px)",
              WebkitBackdropFilter: "blur(14px)",
-             border: "1px solid rgba(193, 232, 255, 0.25)",
-             boxShadow: "0 10px 35px rgba(2, 16, 36, 0.45)"
+             border: "1px solid rgba(171, 210, 250, 0.25)",
+             boxShadow: "0 10px 35px rgba(9, 21, 64, 0.45)"
           }}
         >
           {certificate.category && (

@@ -59,22 +59,22 @@ export default function Folder({ title, icon, technologies, isOpen, onClick }: F
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
         {/* Glow behind the folder */}
-        <div className="absolute inset-0 rounded-xl bg-[#C1E8FF]/20 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 shadow-[0_0_20px_rgba(193,232,255,0.15),_0_10px_35px_rgba(2,16,36,0.4)]" />
+        <div className="absolute inset-0 rounded-xl bg-[#ABD2FA]/20 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 shadow-[0_0_20px_rgba(171,210,250,0.15),_0_10px_35px_rgba(9,21,64,0.4)]" />
 
         {/* Folder Back */}
         <div 
           className="absolute bottom-0 left-0 w-full h-[95%] rounded-xl border border-primary/30 z-0"
           style={{
-            background: "rgba(84, 131, 179, 0.25)",
+            background: "rgba(27, 44, 193, 0.25)",
             backdropFilter: "blur(18px)",
             WebkitBackdropFilter: "blur(18px)",
-            boxShadow: "0 8px 32px rgba(2, 16, 36, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15)",
+            boxShadow: "0 8px 32px rgba(9, 21, 64, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15)",
             borderTopLeftRadius: "0.25rem"
           }}
         >
           {/* Folder Tab */}
           <div className="absolute -top-3 left-0 w-2/5 h-4 border-t border-l border-r border-primary/30 rounded-t-md backdrop-blur-md" 
-               style={{ background: "rgba(84, 131, 179, 0.25)" }} />
+               style={{ background: "rgba(27, 44, 193, 0.25)" }} />
         </div>
 
         {/* Technology Cards (The Papers) */}
@@ -111,12 +111,12 @@ export default function Folder({ title, icon, technologies, isOpen, onClick }: F
 
         {/* Folder Front Flap */}
         <motion.div 
-          className="absolute bottom-0 left-0 w-full h-[85%] rounded-xl border border-primary/40 z-20 flex flex-col items-center justify-center gap-1 md:gap-2 p-2 group-hover:border-[#C1E8FF]/50 transition-colors"
+          className="absolute bottom-0 left-0 w-full h-[85%] rounded-xl border border-primary/40 z-20 flex flex-col items-center justify-center gap-1 md:gap-2 p-2 group-hover:border-[#ABD2FA]/50 transition-colors"
           style={{
-            background: "rgba(84, 131, 179, 0.18)",
+            background: "rgba(27, 44, 193, 0.2)",
             backdropFilter: "blur(18px)",
             WebkitBackdropFilter: "blur(18px)",
-            boxShadow: "0 -4px 20px rgba(2, 16, 36, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
+            boxShadow: "0 -4px 20px rgba(9, 21, 64, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
             transformOrigin: "bottom",
           }}
           initial={{ rotateX: 0 }}
@@ -131,7 +131,7 @@ export default function Folder({ title, icon, technologies, isOpen, onClick }: F
       </motion.div>
 
       {/* Click to explore text */}
-      <p className="absolute -bottom-8 text-[10px] md:text-xs uppercase tracking-widest text-[#7DA0CA] opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-medium">
+      <p className="absolute -bottom-8 text-[10px] md:text-xs uppercase tracking-widest text-[#7692FF] opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-medium">
         Click to explore
       </p>
     </div>

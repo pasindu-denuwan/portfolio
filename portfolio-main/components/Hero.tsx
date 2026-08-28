@@ -42,7 +42,7 @@ export default function Hero() {
           className="relative flex justify-center items-center order-1 md:order-2 mt-8 md:mt-0"
         >
           {/* Circular Frame with Glow */}
-          <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full animate-float shadow-[0_0_60px_rgba(84,131,179,0.4)]">
+          <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full animate-float shadow-[0_0_60px_rgba(27,44,193,0.5)]">
             <img
               src="/portfolio/assets/avatar.png"
               alt="Pasindu Denuwan"

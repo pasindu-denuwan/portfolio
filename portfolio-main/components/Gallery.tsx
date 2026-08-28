@@ -39,7 +39,7 @@ export default function Gallery() {
             <SpotlightCard
               key={`set1-${index}`}
               className={`gallery-item ${image.size}`}
-              spotlightColor="rgba(193, 232, 255, 0.16)"
+              spotlightColor="rgba(171, 210, 250, 0.2)"
             >
               <img src={image.src} alt={image.alt} />
             </SpotlightCard>
@@ -49,7 +49,7 @@ export default function Gallery() {
             <SpotlightCard
               key={`set2-${index}`}
               className={`gallery-item ${image.size}`}
-              spotlightColor="rgba(193, 232, 255, 0.16)"
+              spotlightColor="rgba(171, 210, 250, 0.2)"
             >
               <img src={image.src} alt={image.alt} />
             </SpotlightCard>

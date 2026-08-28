@@ -2091,7 +2091,7 @@ textarea.form-control {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(2, 16, 36, 0.82);
+  background: rgba(9, 21, 64, 0.85);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   z-index: 999999;
@@ -2136,7 +2136,7 @@ textarea.form-control {
   height: 520px;
   top: -15%;
   left: 15%;
-  background: radial-gradient(circle, rgba(84, 131, 179, 0.5) 0%, rgba(5, 38, 89, 0.2) 60%, transparent 80%);
+  background: radial-gradient(circle, rgba(27, 44, 193, 0.5) 0%, rgba(9, 21, 64, 0.2) 60%, transparent 80%);
   animation: preloaderBlobMove1 9s ease-in-out infinite alternate;
 }
 
@@ -2145,7 +2145,7 @@ textarea.form-control {
   height: 480px;
   bottom: -15%;
   right: 15%;
-  background: radial-gradient(circle, rgba(125, 160, 202, 0.45) 0%, rgba(2, 16, 36, 0.15) 60%, transparent 80%);
+  background: radial-gradient(circle, rgba(118, 146, 255, 0.45) 0%, rgba(9, 21, 64, 0.15) 60%, transparent 80%);
   animation: preloaderBlobMove2 11s ease-in-out infinite alternate;
 }
 
@@ -2155,7 +2155,7 @@ textarea.form-control {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(193, 232, 255, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(171, 210, 250, 0.3) 0%, transparent 70%);
   animation: preloaderBlobMove3 7s ease-in-out infinite alternate;
 }
 
@@ -2205,25 +2205,25 @@ textarea.form-control {
 
 .preloader-first {
   color: #ffffff;
-  text-shadow: 0 0 25px rgba(193, 232, 255, 0.4), 0 0 45px rgba(84, 131, 179, 0.3);
+  text-shadow: 0 0 25px rgba(171, 210, 250, 0.4), 0 0 45px rgba(27, 44, 193, 0.3);
 }
 
 .preloader-last {
-  background: linear-gradient(135deg, #C1E8FF 0%, #7DA0CA 45%, #5483B3 100%);
+  background: linear-gradient(135deg, #ABD2FA 0%, #7692FF 45%, #1B2CC1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 25px rgba(84, 131, 179, 0.6));
+  filter: drop-shadow(0 0 25px rgba(27, 44, 193, 0.6));
 }
 
 .preloader-line {
   height: 3px;
   width: 0%;
   max-width: 280px;
-  background: linear-gradient(90deg, #5483B3, #C1E8FF, #5483B3);
+  background: linear-gradient(90deg, #1B2CC1, #ABD2FA, #1B2CC1);
   border-radius: var(--radius-full);
   margin-top: 1.35rem;
-  box-shadow: 0 0 20px rgba(193, 232, 255, 0.85), 0 0 35px rgba(84, 131, 179, 0.5);
+  box-shadow: 0 0 20px rgba(171, 210, 250, 0.85), 0 0 35px rgba(27, 44, 193, 0.5);
   animation: preloaderLineExpand 1s cubic-bezier(0.16, 1, 0.3, 1) 0.18s forwards;
 }
 
