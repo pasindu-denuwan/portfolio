@@ -33,8 +33,8 @@ Portofolio/
 │   └── admin.js                 # Local admin script (CMS forms, JSON generator & download)
 ├── data/
 │   └── content.json             # Central JSON content store (Pasindu Denuwan profile data)
-└── assets/
-    ├── avatar.png               # Hero portrait asset (Pasindu Denuwan)
+└── public/assets/
+    ├── pasinduDenuwan.jpg       # Hero portrait asset (Pasindu Denuwan)
     ├── project1.png             # Java OOP Bookstore System preview
     └── project2.png             # C++ Pong Game preview
 ```

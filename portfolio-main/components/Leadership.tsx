@@ -1,76 +1,96 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  Users2, 
-  Crown, 
-  Globe2, 
-  ShieldCheck,
-  Calendar
-} from "lucide-react";
 
-interface LeadershipRole {
+interface LeadershipTimelineItem {
   id: string;
   role: string;
   organization: string;
   period: string;
-  status: string;
-  type: "Rotaract" | "IEEE" | "Leo";
+  badge: string;
+  type: "rotaract" | "leo" | "ieee";
 }
 
-const leadershipData: LeadershipRole[] = [
+const leadershipTimeline: LeadershipTimelineItem[] = [
   {
     id: "lead-1",
     role: "Vice President",
     organization: "Rotaract Club of Sabaragamuwa University of Sri Lanka",
     period: "2026 – 2027",
-    status: "Executive Board",
-    type: "Rotaract"
+    badge: "Current",
+    type: "rotaract"
   },
   {
     id: "lead-2",
     role: "Vice President",
     organization: "Leo Club of Sabaragamuwa University of Sri Lanka",
     period: "2026 – 2027",
-    status: "Executive Board",
-    type: "Leo"
+    badge: "Current",
+    type: "leo"
   },
   {
     id: "lead-3",
-    role: "Director of Public Relations and Communication",
-    organization: "Rotaract Club of Sabaragamuwa University of Sri Lanka",
-    period: "2025 – 2027",
-    status: "Board of Directors",
-    type: "Rotaract"
+    role: "Vice President",
+    organization: "IEEE Computer Society Chapter, SUSL",
+    period: "2026 – 2027",
+    badge: "Current",
+    type: "ieee"
   },
   {
     id: "lead-4",
-    role: "Public Relations Chair",
-    organization: "IEEE Computer Science Chapter of Sabaragamuwa University of Sri Lanka",
+    role: "Director of Communications & Public Relations",
+    organization: "Rotaract Club of Sabaragamuwa University of Sri Lanka",
     period: "2025 – 2027",
-    status: "Technical Chapter Chair",
-    type: "IEEE"
+    badge: "Former",
+    type: "rotaract"
+  },
+  {
+    id: "lead-5",
+    role: "Public Relations Chair",
+    organization: "IEEE Computer Society Chapter, SUSL",
+    period: "2025 – 2027",
+    badge: "Former",
+    type: "ieee"
   }
 ];
 
-function OrganizationBadge({ type }: { type: "Rotaract" | "IEEE" | "Leo" }) {
+function OrganizationLogoBadge({ type }: { type: "rotaract" | "leo" | "ieee" }) {
   switch (type) {
-    case "Rotaract":
+    case "rotaract":
       return (
-        <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#D91B5C]/25 to-[#9B113E]/10 border border-[#D91B5C]/40 flex items-center justify-center text-[#FF5388] shadow-[0_0_15px_rgba(217,27,92,0.25)] flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
-          <Crown className="w-5 h-5" />
+        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex flex-col items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20">
+          <div className="flex items-center gap-0.5">
+            <span className="text-[#D91B5C] font-black text-[11px] sm:text-xs tracking-tight">Rotaract</span>
+            <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#D91B5C]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 3.1a1 1 0 011 .9v1.1a5.9 5.9 0 012.3 1.3l.8-.8a1 1 0 011.4 1.4l-.8.8a5.9 5.9 0 011.3 2.3h1.1a1 1 0 010 2h-1.1a5.9 5.9 0 01-1.3 2.3l.8.8a1 1 0 01-1.4 1.4l-.8-.8a5.9 5.9 0 01-2.3 1.3v1.1a1 1 0 01-2 0v-1.1a5.9 5.9 0 01-2.3-1.3l-.8.8a1 1 0 01-1.4-1.4l.8-.8A5.9 5.9 0 016.1 14H5a1 1 0 010-2h1.1a5.9 5.9 0 011.3-2.3l-.8-.8a1 1 0 011.4-1.4l.8.8a5.9 5.9 0 012.3-1.3V6a1 1 0 011-.9zm-1 4.9a2 2 0 100 4 2 2 0 000-4z"/>
+            </svg>
+          </div>
+          <span className="text-[5.5px] sm:text-[6px] text-[#D91B5C] font-bold tracking-tighter">Rotary Club Partner</span>
         </div>
       );
-    case "IEEE":
+    case "leo":
       return (
-        <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#00629B]/30 to-[#002855]/15 border border-[#00629B]/50 flex items-center justify-center text-[#50B7FF] shadow-[0_0_15px_rgba(0,98,155,0.3)] flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
-          <Globe2 className="w-5 h-5" />
+        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20">
+          <div className="flex flex-col items-center justify-center">
+            <svg className="w-8 h-8 sm:w-9 sm:h-9" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="22" stroke="#1A1A1A" strokeWidth="2.5" fill="#fff"/>
+              <text x="24" y="21" textAnchor="middle" fill="#9B6B1F" fontSize="11" fontWeight="900" fontFamily="sans-serif">LEO</text>
+              <path d="M12 28c3 5 8 7 12 7s9-2 12-7c-2 2-6 3-12 3s-10-1-12-3z" fill="#D4AF37"/>
+              <path d="M15 22c-2-3 0-6 2-7s3 2 2 4c2-2 5-2 6 0-1-2 0-5 2-4s4 4 2 7" stroke="#1A1A1A" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
+            </svg>
+          </div>
         </div>
       );
-    case "Leo":
+    case "ieee":
       return (
-        <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#F5A623]/25 to-[#B46A00]/15 border border-[#F5A623]/40 flex items-center justify-center text-[#FFC107] shadow-[0_0_15px_rgba(245,166,35,0.25)] flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
-          <ShieldCheck className="w-5 h-5" />
+        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20">
+          <div className="flex items-center gap-1">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#00629B]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 12l10 10 10-10L12 2zm0 3.5L18.5 12 12 18.5 5.5 12 12 5.5zm-1 3.5v6h2V9h-2z"/>
+              <path d="M9 11v2h6v-2H9z" fill="#00629B"/>
+            </svg>
+            <span className="text-[#00629B] font-black text-[11px] sm:text-xs tracking-wider">IEEE</span>
+          </div>
         </div>
       );
   }
@@ -78,8 +98,8 @@ function OrganizationBadge({ type }: { type: "Rotaract" | "IEEE" | "Leo" }) {
 
 export default function Leadership() {
   return (
-    <section id="leadership" className="py-24 px-6 md:px-12 relative z-10">
-      <div className="max-w-7xl mx-auto">
+    <section id="leadership" className="py-24 px-4 sm:px-6 md:px-12 relative z-10">
+      <div className="max-w-5xl mx-auto">
         {/* Section Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -88,55 +108,61 @@ export default function Leadership() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/20 border border-secondary/30 text-xs font-semibold text-accent uppercase tracking-wider mb-3">
-            <Users2 className="w-3.5 h-3.5 text-secondary" />
-            <span>Leadership & Governance</span>
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-dark/90 border border-primary/40 text-xs font-semibold text-accent uppercase tracking-widest mb-4 shadow-sm">
+            <span>LEADERSHIP JOURNEY</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            Leading with <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">Purpose & Impact</span>
+            Positions & Leadership
           </h2>
-          <p className="text-secondary text-base md:text-lg max-w-2xl mx-auto mt-3">
-            Key executive roles and governance responsibilities in international student organizations, technical chapters, and community initiatives.
+          <div className="w-12 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto mt-3.5 mb-4 rounded-full" />
+          <p className="text-secondary/90 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            A journey of growth, responsibility, and impact through leadership roles across clubs and societies.
           </p>
         </motion.div>
 
-        {/* 2x2 Leadership Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {leadershipData.map((item, idx) => (
+        {/* Leadership List */}
+        <div className="flex flex-col gap-4 sm:gap-5">
+          {leadershipTimeline.map((item, idx) => (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.1 }}
-              whileHover={{ y: -4 }}
-              className="glass-card p-6 rounded-2xl border border-primary/30 hover:border-secondary/60 hover:shadow-[0_8px_30px_rgba(27,44,193,0.35)] transition-all duration-300 group relative overflow-hidden"
+              transition={{ duration: 0.4, delay: idx * 0.08 }}
+              className="flex items-center gap-4 sm:gap-6 group relative w-full min-w-0"
             >
-              {/* Background ambient gradient glow on hover */}
-              <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+              {/* Desktop Left Pure White Date Numbers */}
+              <div className="hidden md:block w-28 text-right text-xs sm:text-sm font-bold text-white tracking-wider flex-shrink-0">
+                {item.period}
+              </div>
 
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex items-start gap-3.5">
-                  <OrganizationBadge type={item.type} />
-                  <div>
-                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-primary/25 border border-primary/40 text-accent">
-                        {item.status}
-                      </span>
-                    </div>
-                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-white group-hover:text-accent transition-colors leading-snug">
+              {/* Content Card - Fully Fluid & Responsive */}
+              <div 
+                className="flex-1 glass-card p-3.5 sm:p-4.5 rounded-2xl border border-primary/30 hover:border-secondary/60 hover:shadow-[0_8px_30px_rgba(27,44,193,0.35)] transition-all duration-300 flex items-center justify-between gap-3 sm:gap-4 min-w-0"
+              >
+                <div className="flex items-center gap-3 sm:gap-4 min-w-0 flex-1">
+                  <OrganizationLogoBadge type={item.type} />
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-sm sm:text-base md:text-lg font-bold text-white group-hover:text-accent transition-colors leading-snug break-words">
                       {item.role}
                     </h3>
-                    <p className="text-xs sm:text-sm text-secondary/90 font-medium mt-1">
+                    <p className="text-xs sm:text-sm text-secondary/80 font-normal mt-0.5 leading-tight break-words">
                       {item.organization}
                     </p>
                   </div>
                 </div>
 
-                {/* Year Pill */}
-                <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-dark/70 border border-primary/30 text-accent font-semibold text-xs flex-shrink-0">
-                  <Calendar className="w-3.5 h-3.5 text-secondary" />
-                  <span>{item.period}</span>
+                {/* Right Year / Current / Former Badge */}
+                <div className="flex-shrink-0">
+                  <span 
+                    className={`inline-block px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-semibold whitespace-nowrap border transition-all ${
+                      item.badge === "Current"
+                        ? "bg-primary/25 border-secondary/50 text-accent font-bold shadow-[0_0_12px_rgba(27,44,193,0.3)]"
+                        : "bg-dark/80 border-primary/40 text-secondary"
+                    }`}
+                  >
+                    {item.badge}
+                  </span>
                 </div>
               </div>
             </motion.div>

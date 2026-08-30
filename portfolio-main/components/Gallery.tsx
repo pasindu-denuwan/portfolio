@@ -2,17 +2,23 @@
 import { motion } from "framer-motion";
 import SpotlightCard from "./ui/SpotlightCard";
 
+const resolveSrc = (path: string) => {
+  const isProd = process.env.NODE_ENV === "production";
+  const clean = path.replace(/^\/portfolio/, "");
+  return isProd ? `/portfolio${clean}` : clean;
+};
+
 const galleryImages = [
-  { src: "/portfolio/assets/gallery/image1.jpg", alt: "Event moment", size: "large" },
-  { src: "/portfolio/assets/gallery/image2.jpg", alt: "Team collaboration", size: "medium" },
-  { src: "/portfolio/assets/gallery/image3.jpg", alt: "Hackathon setup", size: "small" },
-  { src: "/portfolio/assets/gallery/image4.jpg", alt: "Group photo", size: "large" },
-  { src: "/portfolio/assets/gallery/image5.jpg", alt: "Project presentation", size: "medium" },
-  { src: "/portfolio/assets/gallery/image6.jpg", alt: "Experience 6", size: "small" },
-  { src: "/portfolio/assets/gallery/image7.png", alt: "Experience 7", size: "large" },
-  { src: "/portfolio/assets/gallery/image8.png", alt: "Experience 8", size: "medium" },
-  { src: "/portfolio/assets/gallery/image9.png", alt: "Experience 9", size: "small" },
-  { src: "/portfolio/assets/gallery/image10.png", alt: "Experience 10", size: "large" },
+  { src: resolveSrc("/assets/gallery/image1.jpg"), alt: "Event moment", size: "large" },
+  { src: resolveSrc("/assets/gallery/image2.jpg"), alt: "Team collaboration", size: "medium" },
+  { src: resolveSrc("/assets/gallery/image3.jpg"), alt: "Hackathon setup", size: "small" },
+  { src: resolveSrc("/assets/gallery/image4.jpg"), alt: "Group photo", size: "large" },
+  { src: resolveSrc("/assets/gallery/image5.jpg"), alt: "Project presentation", size: "medium" },
+  { src: resolveSrc("/assets/gallery/image6.jpg"), alt: "Experience 6", size: "small" },
+  { src: resolveSrc("/assets/gallery/image7.png"), alt: "Experience 7", size: "large" },
+  { src: resolveSrc("/assets/gallery/image8.png"), alt: "Experience 8", size: "medium" },
+  { src: resolveSrc("/assets/gallery/image9.png"), alt: "Experience 9", size: "small" },
+  { src: resolveSrc("/assets/gallery/image10.png"), alt: "Experience 10", size: "large" },
 ];
 
 export default function Gallery() {
