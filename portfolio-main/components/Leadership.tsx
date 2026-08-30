@@ -15,8 +15,6 @@ interface LeadershipRole {
   organization: string;
   period: string;
   status: string;
-  tag: string;
-  description: string;
   type: "Rotaract" | "IEEE" | "Leo";
 }
 
@@ -27,8 +25,6 @@ const leadershipData: LeadershipRole[] = [
     organization: "Rotaract Club of Sabaragamuwa University of Sri Lanka",
     period: "2026 – 2027",
     status: "Executive Board",
-    tag: "Executive Leadership",
-    description: "Driving club governance, strategic planning of district-level community initiatives, team empowerment, and international youth leadership development.",
     type: "Rotaract"
   },
   {
@@ -37,8 +33,6 @@ const leadershipData: LeadershipRole[] = [
     organization: "Leo Club of Sabaragamuwa University of Sri Lanka",
     period: "2026 – 2027",
     status: "Executive Board",
-    tag: "Executive Leadership",
-    description: "Spearheading humanitarian service operations, university-wide social impact projects, operational coordination, and membership growth across university faculties.",
     type: "Leo"
   },
   {
@@ -47,8 +41,6 @@ const leadershipData: LeadershipRole[] = [
     organization: "Rotaract Club of Sabaragamuwa University of Sri Lanka",
     period: "2025 – 2027",
     status: "Board of Directors",
-    tag: "Brand & Media",
-    description: "Leading digital branding, external media relations, official press communications, and promotional strategy for club milestones and flagship community projects.",
     type: "Rotaract"
   },
   {
@@ -57,8 +49,6 @@ const leadershipData: LeadershipRole[] = [
     organization: "IEEE Computer Science Chapter of Sabaragamuwa University of Sri Lanka",
     period: "2025 – 2027",
     status: "Technical Chapter Chair",
-    tag: "Tech Outreach",
-    description: "Managing technical publicity, social presence, student developer engagement, and public outreach for IEEE tech talks, hackathons, and research webinars.",
     type: "IEEE"
   }
 ];
@@ -120,42 +110,34 @@ export default function Leadership() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
               whileHover={{ y: -4 }}
-              className="glass-card p-6 md:p-7 rounded-2xl border border-primary/30 hover:border-secondary/60 hover:shadow-[0_8px_30px_rgba(27,44,193,0.35)] transition-all duration-300 group flex flex-col justify-between relative overflow-hidden"
+              className="glass-card p-6 rounded-2xl border border-primary/30 hover:border-secondary/60 hover:shadow-[0_8px_30px_rgba(27,44,193,0.35)] transition-all duration-300 group relative overflow-hidden"
             >
               {/* Background ambient gradient glow on hover */}
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
-              <div>
-                {/* Header Row: Emblem + Role & Org + Period Badge */}
-                <div className="flex items-start justify-between gap-4 pb-4 mb-4 border-b border-primary/20">
-                  <div className="flex items-start gap-3.5">
-                    <OrganizationBadge type={item.type} />
-                    <div>
-                      <div className="flex flex-wrap items-center gap-2 mb-1">
-                        <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary/25 border border-primary/40 text-accent">
-                          {item.status}
-                        </span>
-                      </div>
-                      <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-accent transition-colors leading-snug">
-                        {item.role}
-                      </h3>
-                      <p className="text-xs md:text-sm text-secondary/90 font-medium mt-0.5">
-                        {item.organization}
-                      </p>
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start gap-3.5">
+                  <OrganizationBadge type={item.type} />
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2 mb-1">
+                      <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-primary/25 border border-primary/40 text-accent">
+                        {item.status}
+                      </span>
                     </div>
-                  </div>
-
-                  {/* Year Pill */}
-                  <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-dark/70 border border-primary/30 text-accent font-semibold text-xs flex-shrink-0">
-                    <Calendar className="w-3.5 h-3.5 text-secondary" />
-                    <span>{item.period}</span>
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-white group-hover:text-accent transition-colors leading-snug">
+                      {item.role}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-secondary/90 font-medium mt-1">
+                      {item.organization}
+                    </p>
                   </div>
                 </div>
 
-                {/* Description */}
-                <p className="text-secondary/90 text-xs md:text-sm leading-relaxed">
-                  {item.description}
-                </p>
+                {/* Year Pill */}
+                <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-dark/70 border border-primary/30 text-accent font-semibold text-xs flex-shrink-0">
+                  <Calendar className="w-3.5 h-3.5 text-secondary" />
+                  <span>{item.period}</span>
+                </div>
               </div>
             </motion.div>
           ))}
