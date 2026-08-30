@@ -151,8 +151,8 @@
     },
     {
       "id": "edu-2",
-      "institution": "University of Moratuwa",
-      "degree": "Python Programming",
+      "institution": "Sabaragamuwa University of Sri Lanka",
+      "degree": "Dip. in Business Management",
       "period": "2025 (Reading)",
       "gpa": "Certification Track",
       "location": "Moratuwa, Sri Lanka",
@@ -162,22 +162,11 @@
     },
     {
       "id": "edu-3",
-      "institution": "Microsoft - Simplilearn",
-      "degree": "Power BI for Beginners",
-      "period": "2025 (Reading)",
-      "gpa": "Certification Track",
-      "location": "Online Learning",
-      "highlights": [
-        "Building interactive reports, data modeling techniques, DAX measures, and executive dashboard visuals."
-      ]
-    },
-    {
-      "id": "edu-4",
-      "institution": "Govt. Science College Matale",
+      "institution": "Rahula College, Matara",
       "degree": "Physical Science Stream (G.C.E. Advanced Level)",
       "period": "2020 - 2022",
       "gpa": "Pass",
-      "location": "Matale, Sri Lanka",
+      "location": "Matara, Sri Lanka",
       "highlights": [
         "Focused on Combined Mathematics, Physics, and Chemistry.",
         "Appointed School Prefect and served as Committee Member for the School Science Club."
@@ -188,9 +177,9 @@
     {
       "id": "exp-1",
       "role": "School Prefect",
-      "company": "Govt. Science College Matale",
+      "company": "Rahula College, Matara",
       "period": "2021 - 2022",
-      "location": "Matale, Sri Lanka",
+      "location": "Matara, Sri Lanka",
       "type": "Leadership & Governance",
       "description": [
         "Maintained student discipline, organized school assembly events, and represented student interests to college management.",
@@ -200,9 +189,9 @@
     {
       "id": "exp-2",
       "role": "Committee Member - Science Club",
-      "company": "Govt. Science College Matale",
+      "company": "Rahula College, Matara",
       "period": "2020 - 2022",
-      "location": "Matale, Sri Lanka",
+      "location": "Matara, Sri Lanka",
       "type": "Academic Extracurricular",
       "description": [
         "Co-organized collegiate science fairs, inter-school knowledge quizzes, and STEM awareness sessions.",
@@ -212,9 +201,9 @@
     {
       "id": "exp-3",
       "role": "Member of School Netball Team",
-      "company": "Govt. Science College Matale",
+      "company": "Rahula College, Matara",
       "period": "2020 - 2022",
-      "location": "Matale, Sri Lanka",
+      "location": "Matara, Sri Lanka",
       "type": "Sports & Athletics",
       "description": [
         "Competed in inter-school and zonal tournaments, demonstrating strategic positioning, discipline, and sportsmanship.",
@@ -264,21 +253,21 @@
     {
       "id": "ach-1",
       "title": "Appointed School Prefect",
-      "issuer": "Govt. Science College Matale",
+      "issuer": "Rahula College, Matara",
       "year": "2021",
       "description": "Awarded official prefectship badge in recognition of leadership, high moral standing, and academic dedication."
     },
     {
       "id": "ach-2",
       "title": "School Sports Representation",
-      "issuer": "Govt. Science College Matale",
+      "issuer": "Rahula College, Matara",
       "year": "2020 - 2022",
       "description": "Represented the college in zonal championships with distinction."
     },
     {
       "id": "ach-3",
       "title": "Science Club Executive Committee",
-      "issuer": "Govt. Science College Matale",
+      "issuer": "Rahula College, Matara",
       "year": "2020 - 2022",
       "description": "Organized annual science exhibitions and academic competitions for high school students."
     }

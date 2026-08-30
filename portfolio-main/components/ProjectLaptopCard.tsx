@@ -29,8 +29,8 @@ export default function ProjectLaptopCard({
   return (
     <motion.div 
       whileHover={{ y: -4 }}
-      transition={{ type: "spring", stiffness: 300, damping: 22 }}
-      className="glass-card rounded-2xl overflow-hidden border border-primary/30 hover:border-secondary/60 hover:shadow-[0_8px_30px_rgba(27,44,193,0.4)] transition-all duration-300 flex flex-col justify-between h-full w-[300px] sm:w-[340px] md:w-[370px] flex-shrink-0 snap-start group select-none"
+      transition={{ duration: 0.15, ease: "easeOut" }}
+      className="glass-card rounded-2xl overflow-hidden border border-primary/30 hover:border-secondary/60 hover:shadow-[0_8px_30px_rgba(27,44,193,0.4)] transition-all duration-150 flex flex-col justify-between h-full w-[300px] sm:w-[340px] md:w-[370px] flex-shrink-0 snap-start group select-none"
     >
       {/* Top Preview Frame - Compact Aspect Ratio */}
       <div className="relative w-full aspect-[16/9] bg-dark/80 border-b border-primary/20 overflow-hidden flex flex-col">
@@ -53,7 +53,7 @@ export default function ProjectLaptopCard({
               src={resolveSrc(image)} 
               alt={title} 
               onError={() => setImgError(true)}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" 
             />
           ) : (
             <div className="flex flex-col items-center justify-center p-4 text-center gap-1.5">

@@ -282,7 +282,7 @@
     cards.forEach((card) => {
       // Ensure 3D perspective styles
       card.style.transformStyle = 'preserve-3d';
-      card.style.transition = 'transform 0.15s ease-out, box-shadow 0.25s ease';
+      card.style.transition = 'transform 0.08s ease-out, box-shadow 0.15s ease';
 
       // Create subtle dynamic reflection glare
       const glare = document.createElement('div');

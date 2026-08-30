@@ -21,6 +21,17 @@
   .text-gradient {
     @apply bg-gradient-to-r from-accent via-secondary to-primary bg-clip-text text-transparent;
   }
+  .mask-edge-gradient {
+    mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 /* Gallery Animation and Styles */
@@ -29,10 +40,15 @@
   100% { transform: translateX(calc(-50% - 1rem)); } /* -50% because we duplicate the track, -1rem for gap */
 }
 
+@keyframes scroll-cert {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 0.75rem)); } /* -50% because we duplicate the track, -0.75rem for gap */
+}
 
-.gallery-wrapper {
-  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+.gallery-wrapper,
+.cert-wrapper {
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
 }
 
 .marquee-track {
@@ -42,7 +58,16 @@
   animation: scroll 80s linear infinite;
 }
 
-.marquee-track:hover {
+.cert-marquee-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scroll-cert 45s linear infinite;
+  padding: 1rem 0;
+}
+
+.marquee-track:hover,
+.cert-marquee-track:hover {
   animation-play-state: paused;
 }
 

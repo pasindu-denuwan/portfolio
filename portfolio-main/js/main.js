@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
           <div class="contact-card-text">
             <h4>Location</h4>
-            <p>${profile.location || 'Kelaniya / Matale, Sri Lanka'}</p>
+            <p>${profile.location || 'Kelaniya / Matara, Sri Lanka'}</p>
           </div>
         </div>
       `;
@@ -673,7 +673,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           id: "exp-1",
           role: "School Prefect",
-          company: "Govt. Science College Matale",
+          company: "Rahula College, Matara",
           period: "2021 - 2022",
           type: "Leadership & Governance",
           description: ["Maintained student discipline, organized school assembly events, and represented student interests."]
@@ -694,7 +694,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           id: "ach-1",
           title: "Appointed School Prefect",
-          issuer: "Govt. Science College Matale",
+          issuer: "Rahula College, Matara",
           year: "2021",
           description: "Awarded official prefectship badge in recognition of leadership and academic dedication."
         }

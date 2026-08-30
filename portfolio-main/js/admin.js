@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
           company: document.getElementById('inp-company').value,
           period: document.getElementById('inp-period').value,
           type: document.getElementById('inp-type').value,
-          location: 'Matale, Sri Lanka',
+          location: 'Matara, Sri Lanka',
           description: document.getElementById('inp-bullets').value.split('\n').map(s => s.trim()).filter(Boolean)
         };
       } else if (currentEditType === 'education') {

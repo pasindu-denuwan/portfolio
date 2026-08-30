@@ -7,6 +7,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import EducationTimeline from "@/components/EducationTimeline";
 import Achievements from "@/components/Achievements";
+import Leadership from "@/components/Leadership";
 import Gallery from "@/components/Gallery";
 import Resume from "@/components/Resume";
 import Contact from "@/components/Contact";
@@ -36,6 +37,7 @@ export default function Home() {
         <Projects />
         <EducationTimeline />
         <Achievements />
+        <Leadership />
         <Gallery />
         <Resume />
         <Contact />
