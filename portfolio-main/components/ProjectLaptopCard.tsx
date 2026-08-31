@@ -52,6 +52,8 @@ export default function ProjectLaptopCard({
             <img 
               src={resolveSrc(image)} 
               alt={title} 
+              loading="lazy"
+              decoding="async"
               onError={() => setImgError(true)}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" 
             />

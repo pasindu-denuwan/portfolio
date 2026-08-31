@@ -47,7 +47,7 @@ export default function Gallery() {
               className={`gallery-item ${image.size}`}
               spotlightColor="rgba(171, 210, 250, 0.2)"
             >
-              <img src={image.src} alt={image.alt} />
+              <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
             </SpotlightCard>
           ))}
           {/* Duplicated set for seamless loop */}
@@ -57,7 +57,7 @@ export default function Gallery() {
               className={`gallery-item ${image.size}`}
               spotlightColor="rgba(171, 210, 250, 0.2)"
             >
-              <img src={image.src} alt={image.alt} />
+              <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
             </SpotlightCard>
           ))}
         </div>

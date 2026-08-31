@@ -162,9 +162,10 @@ const Velaris = ({
     };
 
     const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio, 2);
-      canvas.width = container.clientWidth * dpr;
-      canvas.height = container.clientHeight * dpr;
+      // Performance optimization: render ambient noise at optimal resolution
+      const scale = Math.min(window.devicePixelRatio || 1, 1) * 0.6;
+      canvas.width = Math.round(container.clientWidth * scale);
+      canvas.height = Math.round(container.clientHeight * scale);
       gl.viewport(0, 0, canvas.width, canvas.height);
     };
 

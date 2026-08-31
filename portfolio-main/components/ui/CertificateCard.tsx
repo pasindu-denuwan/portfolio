@@ -88,6 +88,8 @@ export default function CertificateCard({ certificate, isExpanded, onToggle }: C
       <motion.img
         src={resolveSrc(certificate.image)}
         alt={certificate.title}
+        loading="lazy"
+        decoding="async"
         initial={{ scale: 1, filter: "blur(0px) brightness(1)" }}
         animate={{
           scale: isExpanded ? 1.06 : 1,

@@ -93,6 +93,8 @@ export default function Hero() {
             <img
               src={resolveSrc("/assets/pasinduDenuwan.jpg")}
               alt="Pasindu Denuwan"
+              loading="eager"
+              decoding="async"
               className="w-full h-full rounded-full object-cover"
             />
           </div>
