@@ -10,12 +10,12 @@ const resolveSrc = (path: string) => {
 
 export default function Resume() {
   return (
-    <section className="py-12 px-6 md:px-12 relative z-10">
+    <section className="py-10 md:py-12 px-6 md:px-12 relative z-10">
       <motion.div 
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="max-w-4xl mx-auto glass-card p-12 text-center rounded-3xl"
+        className="max-w-4xl mx-auto glass-card p-8 md:p-10 text-center rounded-3xl"
       >
         <h3 className="text-3xl font-bold text-white mb-4">My Resume</h3>
         <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">

@@ -22,19 +22,19 @@ const education = [
 
 export default function EducationTimeline() {
   return (
-    <section id="education" className="py-24 px-6 md:px-12 relative z-10">
+    <section id="education" className="py-14 md:py-16 px-6 md:px-12 relative z-10">
       <div className="max-w-4xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-12"
         >
           <h3 className="text-white font-medium tracking-widest uppercase mb-2">Education</h3>
           <h2 className="text-4xl md:text-5xl font-bold text-white">My Academic Journey</h2>
         </motion.div>
 
-        <div className="relative border-l border-primary/30 ml-4 md:ml-8 pl-8 md:pl-12 space-y-10">
+        <div className="relative border-l border-primary/30 ml-4 md:ml-8 pl-8 md:pl-12 space-y-6 md:space-y-8">
           {education.map((item, idx) => (
             <motion.div 
               key={idx}

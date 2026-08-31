@@ -4,19 +4,19 @@ import { Mail, Linkedin, Github, MapPin, Send, GraduationCap, Phone } from "luci
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-6 md:px-12 relative z-10">
+    <section id="contact" className="py-14 md:py-16 px-6 md:px-12 relative z-10">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-12"
         >
           <h3 className="text-white font-medium tracking-widest uppercase mb-2">Contact & Reference</h3>
           <h2 className="text-4xl md:text-5xl font-bold text-white">Let&apos;s Connect</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {/* Contact Info & Reference */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}

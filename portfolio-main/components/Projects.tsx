@@ -104,7 +104,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 px-6 md:px-12 relative z-10">
+    <section id="projects" className="py-14 md:py-16 px-6 md:px-12 relative z-10">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div 

@@ -98,7 +98,7 @@ function OrganizationLogoBadge({ type }: { type: "rotaract" | "leo" | "ieee" }) 
 
 export default function Leadership() {
   return (
-    <section id="leadership" className="py-24 px-4 sm:px-6 md:px-12 relative z-10">
+    <section id="leadership" className="py-14 md:py-16 px-4 sm:px-6 md:px-12 relative z-10">
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
         <motion.div 
@@ -106,7 +106,7 @@ export default function Leadership() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-12"
         >
           <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-dark/90 border border-primary/40 text-xs font-semibold text-accent uppercase tracking-widest mb-4 shadow-sm">
             <span>LEADERSHIP JOURNEY</span>

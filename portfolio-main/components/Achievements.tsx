@@ -163,7 +163,7 @@ export default function Achievements() {
   };
 
   return (
-    <section id="achievements" className="py-20 relative z-10 overflow-hidden mt-8">
+    <section id="achievements" className="py-14 md:py-16 relative z-10 overflow-hidden">
       {/* Background blend */}
       <div 
         className="absolute inset-0 pointer-events-none z-[-1]"
@@ -172,7 +172,7 @@ export default function Achievements() {
         }}
       />
       
-      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
