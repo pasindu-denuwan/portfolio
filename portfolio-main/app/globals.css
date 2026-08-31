@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: auto;
+  }
   body {
     @apply bg-dark text-accent font-sans antialiased selection:bg-primary/30;
   }

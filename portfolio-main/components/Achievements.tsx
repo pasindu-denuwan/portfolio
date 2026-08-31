@@ -70,7 +70,7 @@ export default function Achievements() {
     if (!container) return;
 
     let animationFrameId: number;
-    const speed = 0.75; // Pixels per frame
+    const speed = 0.5; // Steady, calm pixels per frame
 
     const step = () => {
       if (!isPausedRef.current && !isDraggingRef.current && container) {
@@ -112,10 +112,10 @@ export default function Achievements() {
 
     setTimeout(() => {
       isPausedRef.current = false;
-    }, 2500);
+    }, 2000);
   };
 
-  // Mouse Drag-to-Scroll Handlers
+  // Mouse Drag-to-Scroll Handlers (1:1 Parallel Direct Tracking)
   const handleMouseDown = (e: React.MouseEvent) => {
     const container = scrollContainerRef.current;
     if (!container) return;
@@ -129,11 +129,10 @@ export default function Achievements() {
   const handleMouseMove = (e: React.MouseEvent) => {
     const container = scrollContainerRef.current;
     if (!isDraggingRef.current || !container) return;
-    e.preventDefault();
     const x = e.pageX - container.offsetLeft;
-    const walk = (x - startXRef.current) * 1.4;
+    const walk = x - startXRef.current; // 1:1 Parallel tracking with mouse
 
-    if (Math.abs(walk) > 5) {
+    if (Math.abs(walk) > 4) {
       hasDraggedRef.current = true;
     }
 
