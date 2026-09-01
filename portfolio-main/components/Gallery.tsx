@@ -9,16 +9,21 @@ const resolveSrc = (path: string) => {
 };
 
 const galleryImages = [
-  { src: resolveSrc("/assets/gallery/image1.jpg"), alt: "Event moment", size: "large" },
-  { src: resolveSrc("/assets/gallery/image2.jpg"), alt: "Team collaboration", size: "medium" },
-  { src: resolveSrc("/assets/gallery/image3.jpg"), alt: "Hackathon setup", size: "small" },
-  { src: resolveSrc("/assets/gallery/image4.jpg"), alt: "Group photo", size: "large" },
-  { src: resolveSrc("/assets/gallery/image5.jpg"), alt: "Project presentation", size: "medium" },
-  { src: resolveSrc("/assets/gallery/image6.jpg"), alt: "Experience 6", size: "small" },
-  { src: resolveSrc("/assets/gallery/image7.png"), alt: "Experience 7", size: "large" },
-  { src: resolveSrc("/assets/gallery/image8.png"), alt: "Experience 8", size: "medium" },
-  { src: resolveSrc("/assets/gallery/image9.png"), alt: "Experience 9", size: "small" },
-  { src: resolveSrc("/assets/gallery/image10.png"), alt: "Experience 10", size: "large" },
+  { src: resolveSrc("/assets/gallery/image1.jpg"), alt: "Volunteering", size: "large" },
+  { src: resolveSrc("/assets/gallery/image2.jpg"), alt: "OrganizingCommittee", size: "medium" },
+  { src: resolveSrc("/assets/gallery/image3.jpg"), alt: "Leadership", size: "small" },
+  { src: resolveSrc("/assets/gallery/image4.jpg"), alt: "Leadership", size: "large" },
+  { src: resolveSrc("/assets/gallery/image5.jpg"), alt: "appointment", size: "medium" },
+  { src: resolveSrc("/assets/gallery/image6.jpg"), alt: "Leadership", size: "small" },
+  { src: resolveSrc("/assets/gallery/image7.png"), alt: "OrganizingCommittee", size: "large" },
+  { src: resolveSrc("/assets/gallery/image8.png"), alt: "Appriciation", size: "medium" },
+  { src: resolveSrc("/assets/gallery/image9.png"), alt: "entertaitment", size: "small" },
+  { src: resolveSrc("/assets/gallery/image10.png"), alt: "Volunteering", size: "large" },
+  { src: resolveSrc("/assets/gallery/image11.png"), alt: "Achievement", size: "large" },
+  { src: resolveSrc("/assets/gallery/image12.png"), alt: "Leadership", size: "medium" },
+  { src: resolveSrc("/assets/gallery/image13.png"), alt: "Volunteering", size: "small" },
+  { src: resolveSrc("/assets/gallery/image14.png"), alt: "Achievement", size: "large" },
+  { src: resolveSrc("/assets/gallery/image15.png"), alt: "Leadership", size: "small" },
 ];
 
 export default function Gallery() {
