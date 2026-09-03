@@ -91,7 +91,7 @@ export default function Hero() {
           {/* Circular Frame with Glow */}
           <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full animate-float shadow-[0_0_60px_rgba(27,44,193,0.5)]">
             <img
-              src={resolveSrc("/assets/pasinduDenuwan.jpg")}
+              src={resolveSrc("/assets/pasinduDenuwan.png")}
               alt="Pasindu Denuwan"
               loading="eager"
               decoding="async"

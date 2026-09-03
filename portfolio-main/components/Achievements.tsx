@@ -11,7 +11,7 @@ const certificates: Certificate[] = [
     issuer: "1st Runner Up",
     year: "2026",
     category: "Designathon Award",
-    image: "/assets/certificates/image-1.jpeg",
+    image: "/assets/certificates/image-1.png",
   },
   {
     id: "cert-2",
@@ -19,7 +19,7 @@ const certificates: Certificate[] = [
     issuer: "MAS Holdings",
     year: "2026",
     category: "Professional Workshop",
-    image: "/assets/certificates/image-2.jpeg",
+    image: "/assets/certificates/image-2.png",
   },
   {
     id: "cert-3",
@@ -43,7 +43,7 @@ const certificates: Certificate[] = [
     issuer: "University of Moratuwa",
     year: "2026",
     category: "Coding Challenge",
-    image: "/assets/certificates/image-5.jpg",
+    image: "/assets/certificates/image-5.png",
   },
   {
     id: "cert-6",
