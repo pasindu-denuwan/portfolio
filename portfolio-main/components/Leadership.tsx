@@ -64,27 +64,22 @@ function OrganizationLogoBadge({ type }: { type: "rotaract" | "leo" | "ieee" }) 
   switch (type) {
     case "rotaract":
       return (
-        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex flex-col items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20">
-          <div className="flex items-center gap-0.5">
-            <span className="text-[#D91B5C] font-black text-[11px] sm:text-xs tracking-tight">Rotaract</span>
-            <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#D91B5C]" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 3.1a1 1 0 011 .9v1.1a5.9 5.9 0 012.3 1.3l.8-.8a1 1 0 011.4 1.4l-.8.8a5.9 5.9 0 011.3 2.3h1.1a1 1 0 010 2h-1.1a5.9 5.9 0 01-1.3 2.3l.8.8a1 1 0 01-1.4 1.4l-.8-.8a5.9 5.9 0 01-2.3 1.3v1.1a1 1 0 01-2 0v-1.1a5.9 5.9 0 01-2.3-1.3l-.8.8a1 1 0 01-1.4-1.4l.8-.8A5.9 5.9 0 016.1 14H5a1 1 0 010-2h1.1a5.9 5.9 0 011.3-2.3l-.8-.8a1 1 0 011.4-1.4l.8.8a5.9 5.9 0 012.3-1.3V6a1 1 0 011-.9zm-1 4.9a2 2 0 100 4 2 2 0 000-4z" />
-            </svg>
-          </div>
-          <span className="text-[5.5px] sm:text-[6px] text-[#D91B5C] font-bold tracking-tighter">Rotary Club Partner</span>
+        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20 overflow-hidden">
+          <img
+            src={resolveSrc("/assets/rotaract.png")}
+            alt="Rotaract Club of Sabaragamuwa University of Sri Lanka"
+            className="w-full h-full object-contain"
+          />
         </div>
       );
     case "leo":
       return (
-        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20">
-          <div className="flex flex-col items-center justify-center">
-            <svg className="w-8 h-8 sm:w-9 sm:h-9" viewBox="0 0 48 48" fill="none">
-              <circle cx="24" cy="24" r="22" stroke="#1A1A1A" strokeWidth="2.5" fill="#fff" />
-              <text x="24" y="21" textAnchor="middle" fill="#9B6B1F" fontSize="11" fontWeight="900" fontFamily="sans-serif">LEO</text>
-              <path d="M12 28c3 5 8 7 12 7s9-2 12-7c-2 2-6 3-12 3s-10-1-12-3z" fill="#D4AF37" />
-              <path d="M15 22c-2-3 0-6 2-7s3 2 2 4c2-2 5-2 6 0-1-2 0-5 2-4s4 4 2 7" stroke="#1A1A1A" strokeWidth="1.2" strokeLinecap="round" fill="none" />
-            </svg>
-          </div>
+        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20 overflow-hidden">
+          <img
+            src={resolveSrc("/assets/leo.jpg")}
+            alt="Leo Club of Sabaragamuwa University of Sri Lanka"
+            className="w-full h-full object-contain"
+          />
         </div>
       );
     case "ieee":
@@ -160,8 +155,8 @@ export default function Leadership() {
                 <div className="flex-shrink-0">
                   <span
                     className={`inline-block px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-semibold whitespace-nowrap border transition-all ${item.badge === "Current"
-                        ? "bg-primary/25 border-secondary/50 text-accent font-bold shadow-[0_0_12px_rgba(27,44,193,0.3)]"
-                        : "bg-dark/80 border-primary/40 text-secondary"
+                      ? "bg-primary/25 border-secondary/50 text-accent font-bold shadow-[0_0_12px_rgba(27,44,193,0.3)]"
+                      : "bg-dark/80 border-primary/40 text-secondary"
                       }`}
                   >
                     {item.badge}
