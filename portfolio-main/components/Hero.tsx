@@ -28,7 +28,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6 md:px-12 relative z-10">
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -89,12 +89,14 @@ export default function Hero() {
           className="relative flex justify-center items-center order-1 md:order-2 mt-8 md:mt-0"
         >
           {/* Circular Frame with Glow */}
-          <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full animate-float shadow-[0_0_60px_rgba(27,44,193,0.5)]">
-            <img
-              src={resolveSrc("/assets/pasinduDenuwan.png")}
-              alt="Pasindu Denuwan"
-              loading="eager"
-              decoding="async"
+          <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full animate-float shadow-[0_0_60px_rgba(27,44,193,0.5)] overflow-hidden">
+            <video
+              src={resolveSrc("/assets/pasinduDenuwan.mp4")}
+              poster={resolveSrc("/assets/1.png")}
+              autoPlay
+              muted
+              playsInline
+              preload="auto"
               className="w-full h-full rounded-full object-cover"
             />
           </div>

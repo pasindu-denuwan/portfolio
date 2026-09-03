@@ -2,6 +2,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const resolveSrc = (path: string) => {
+  const isProd = process.env.NODE_ENV === "production";
+  const clean = path.replace(/^\/portfolio/, "");
+  return isProd ? `/portfolio${clean}` : clean;
+};
+
 interface LeadershipTimelineItem {
   id: string;
   role: string;
@@ -83,14 +89,12 @@ function OrganizationLogoBadge({ type }: { type: "rotaract" | "leo" | "ieee" }) 
       );
     case "ieee":
       return (
-        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20">
-          <div className="flex items-center gap-1">
-            <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#00629B]" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2L2 12l10 10 10-10L12 2zm0 3.5L18.5 12 12 18.5 5.5 12 12 5.5zm-1 3.5v6h2V9h-2z" />
-              <path d="M9 11v2h6v-2H9z" fill="#00629B" />
-            </svg>
-            <span className="text-[#00629B] font-black text-[11px] sm:text-xs tracking-wider">IEEE</span>
-          </div>
+        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20 overflow-hidden">
+          <img
+            src={resolveSrc("/assets/ieee-cs.png")}
+            alt="IEEE Computer Society Chapter, SUSL"
+            className="w-full h-full object-contain"
+          />
         </div>
       );
   }
