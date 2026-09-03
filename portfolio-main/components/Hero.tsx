@@ -105,7 +105,7 @@ export default function Hero() {
           <motion.div
             animate={{ y: [-10, 10, -10] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            className="absolute bottom-4 -left-6 md:-left-12 glass-card p-4 px-5 rounded-2xl shadow-2xl z-20"
+            className="absolute -bottom-2 md:-bottom-4 -left-6 md:-left-12 glass-card p-4 px-5 rounded-2xl shadow-2xl z-20"
           >
             <p className="text-xs text-secondary font-semibold">Undergraduate</p>
             <p className="text-white font-bold text-sm sm:text-base mt-1 whitespace-nowrap">B.Sc (Hons) in Computing and Information Systems</p>
