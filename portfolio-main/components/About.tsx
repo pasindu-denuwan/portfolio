@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { MapPin, GraduationCap, Code2, Target, Lightbulb, Rocket } from "lucide-react";
+import { MapPin, GraduationCap, Code2, Target, Lightbulb, Rocket, User } from "lucide-react";
 
 export default function About() {
   const cards = [
@@ -19,10 +19,16 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-10 md:mb-12"
         >
-          <h3 className="text-white font-medium tracking-widest uppercase mb-2">About Me</h3>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Driven by Technology, Inspired by Data</h2>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/20 border border-secondary/30 text-xs font-semibold text-accent uppercase tracking-wider mb-3">
+            <User className="w-3.5 h-3.5 text-secondary" />
+            <span>About Me</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+            Driven by Technology, Inspired by <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">Data</span>
+          </h2>
         </motion.div>
 
         <motion.div 

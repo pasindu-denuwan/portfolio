@@ -2,6 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import { Users } from "lucide-react";
+
 const resolveSrc = (path: string) => {
   const isProd = process.env.NODE_ENV === "production";
   const clean = path.replace(/^\/portfolio/, "");
@@ -107,14 +109,14 @@ export default function Leadership() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 md:mb-12"
         >
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-dark/90 border border-primary/40 text-xs font-semibold text-accent uppercase tracking-widest mb-4 shadow-sm">
-            <span>LEADERSHIP JOURNEY</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/20 border border-secondary/30 text-xs font-semibold text-accent uppercase tracking-wider mb-3">
+            <Users className="w-3.5 h-3.5 text-secondary" />
+            <span>Leadership Journey</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            Positions & Leadership
+          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+            Positions & <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">Leadership</span>
           </h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto mt-3.5 mb-4 rounded-full" />
-          <p className="text-secondary/90 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-secondary text-base md:text-lg max-w-2xl mx-auto mt-3">
             A journey of growth, responsibility, and impact through leadership roles across clubs and societies.
           </p>
         </motion.div>

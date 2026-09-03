@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { Camera } from "lucide-react";
 import SpotlightCard from "./ui/SpotlightCard";
 
 const resolveSrc = (path: string) => {
@@ -34,9 +35,16 @@ export default function Gallery() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Beyond Academics</h2>
-          <p className="text-white/90 text-lg max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/20 border border-secondary/30 text-xs font-semibold text-accent uppercase tracking-wider mb-3">
+            <Camera className="w-3.5 h-3.5 text-secondary" />
+            <span>Moments & Highlights</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+            Beyond <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">Academics</span>
+          </h2>
+          <p className="text-secondary text-base md:text-lg max-w-2xl mx-auto mt-3">
             A glimpse into the events, projects, and experiences that shaped my journey.
           </p>
         </motion.div>

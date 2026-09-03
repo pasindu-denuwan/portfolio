@@ -28,10 +28,19 @@ export default function EducationTimeline() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-10 md:mb-12"
         >
-          <h3 className="text-white font-medium tracking-widest uppercase mb-2">Education</h3>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">My Academic Journey</h2>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/20 border border-secondary/30 text-xs font-semibold text-accent uppercase tracking-wider mb-3">
+            <GraduationCap className="w-3.5 h-3.5 text-secondary" />
+            <span>Academic Background</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+            My Academic <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">Journey</span>
+          </h2>
+          <p className="text-secondary text-base md:text-lg max-w-2xl mx-auto mt-3">
+            An overview of my academic qualifications and educational background.
+          </p>
         </motion.div>
 
         <div className="relative border-l border-primary/30 ml-4 md:ml-8 pl-8 md:pl-12 space-y-6 md:space-y-8">
