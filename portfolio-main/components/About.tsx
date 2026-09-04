@@ -35,25 +35,33 @@ export default function About() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="glass-card p-6 md:p-10"
+          transition={{ duration: 0.5 }}
+          className="glass-card p-6 sm:p-8 md:p-10 rounded-3xl border border-primary/30 hover:border-secondary/40 transition-all duration-300 shadow-2xl"
         >
-          <p className="text-white/90 text-lg leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+          <p className="text-white/90 text-base md:text-lg leading-relaxed mb-8 sm:mb-10 text-center max-w-3xl mx-auto">
             An enthusiastic undergraduate pursuing a B.Sc (Hons) in Computing and Information Systems at the Faculty of Computing, Sabaragamuwa University of Sri Lanka, with a growing interest in data science and analytics. Passionate about learning Python and SQL and continuously improving skills to gain practical experience and create meaningful data driven insights.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {cards.map((card, idx) => (
               <motion.div 
                 key={idx}
-                whileHover={{ y: -5 }}
-                className="glass-panel p-6 flex items-start gap-4 group"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.06 }}
+                className="glass-card p-5 sm:p-6 rounded-2xl border border-primary/30 hover:border-secondary/60 hover:shadow-[0_8px_30px_rgba(27,44,193,0.35)] hover:-translate-y-1 transition-all duration-300 flex items-start gap-4 group cursor-default"
               >
-                <div className="p-3 rounded-lg bg-primary/20 text-accent group-hover:bg-primary/40 transition-colors">
+                <div className="w-11 h-11 rounded-xl bg-primary/20 border border-primary/30 text-accent group-hover:bg-primary/40 group-hover:border-secondary/60 group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(118,146,255,0.4)] flex items-center justify-center transition-all duration-300 flex-shrink-0">
                   {card.icon}
                 </div>
-                <div>
-                  <h4 className="text-secondary/80 text-sm font-medium">{card.title}</h4>
-                  <p className="text-white font-medium mt-1">{card.value}</p>
+                <div className="min-w-0 flex-1">
+                  <h4 className="text-secondary/80 text-xs font-semibold uppercase tracking-wider mb-1">
+                    {card.title}
+                  </h4>
+                  <p className="text-white font-bold text-sm sm:text-base group-hover:text-accent transition-colors leading-snug">
+                    {card.value}
+                  </p>
                 </div>
               </motion.div>
             ))}
