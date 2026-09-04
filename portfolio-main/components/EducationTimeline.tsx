@@ -50,18 +50,28 @@ export default function EducationTimeline() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.15 }}
-              className="relative glass-card p-6 md:p-7"
+              transition={{ delay: idx * 0.15, duration: 0.5 }}
+              className="relative group w-full min-w-0 cursor-default"
             >
-              <div className="absolute -left-[45px] md:-left-[61px] top-7 w-8 h-8 md:w-10 md:h-10 rounded-full bg-deep border-2 border-accent flex items-center justify-center glow text-accent">
-                <GraduationCap className="w-4 h-4 md:w-5 md:h-5" />
+              {/* Timeline Icon Node with Interactive Hover Glow & Scale */}
+              <div className="absolute -left-[45px] md:-left-[61px] top-6 sm:top-7 w-8 h-8 md:w-10 md:h-10 rounded-full bg-deep border-2 border-accent/70 group-hover:border-secondary group-hover:bg-primary/30 group-hover:shadow-[0_0_18px_rgba(118,146,255,0.7)] group-hover:scale-110 flex items-center justify-center text-accent group-hover:text-white transition-all duration-300 z-10">
+                <GraduationCap className="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:scale-105" />
               </div>
               
-              <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                <h4 className="text-xl md:text-2xl font-bold text-white">{item.degree}</h4>
-                <span className="text-primary font-medium bg-primary/10 px-3 py-1 rounded-full text-sm w-fit mt-2 md:mt-0">{item.period}</span>
+              {/* Content Card with Interactive Glow & Hover Elevation */}
+              <div className="glass-card p-5 sm:p-6 md:p-7 rounded-2xl border border-primary/30 group-hover:border-secondary/60 group-hover:shadow-[0_8px_30px_rgba(27,44,193,0.35)] group-hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                  <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-white group-hover:text-accent transition-colors leading-snug">
+                    {item.degree}
+                  </h4>
+                  <span className="inline-block px-3 py-1 rounded-lg text-xs sm:text-sm font-semibold whitespace-nowrap border bg-primary/25 border-secondary/50 text-accent font-bold shadow-[0_0_12px_rgba(27,44,193,0.3)] group-hover:border-secondary group-hover:shadow-[0_0_16px_rgba(27,44,193,0.45)] transition-all duration-300 w-fit">
+                    {item.period}
+                  </span>
+                </div>
+                <p className="text-secondary/90 group-hover:text-accent/90 text-sm sm:text-base md:text-lg transition-colors">
+                  {item.school}
+                </p>
               </div>
-              <p className="text-accent text-base md:text-lg">{item.school}</p>
             </motion.div>
           ))}
         </div>
