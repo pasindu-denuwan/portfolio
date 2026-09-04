@@ -111,8 +111,10 @@ export default function Achievements() {
     });
 
     setTimeout(() => {
-      isPausedRef.current = false;
-    }, 2000);
+      if (!scrollContainerRef.current?.matches(":hover")) {
+        isPausedRef.current = false;
+      }
+    }, 1500);
   };
 
   // Mouse Drag-to-Scroll Handlers (1:1 Parallel Direct Tracking)
@@ -128,7 +130,12 @@ export default function Achievements() {
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const container = scrollContainerRef.current;
-    if (!isDraggingRef.current || !container) return;
+    if (!container) return;
+
+    // Immediately pause continuous scrolling whenever cursor is over the track
+    isPausedRef.current = true;
+
+    if (!isDraggingRef.current) return;
     const x = e.pageX - container.offsetLeft;
     const walk = x - startXRef.current; // 1:1 Parallel tracking with mouse
 
@@ -149,16 +156,21 @@ export default function Achievements() {
     }
   };
 
-  const handleMouseUpOrLeave = () => {
-    if (isDraggingRef.current) {
-      isDraggingRef.current = false;
-      setTimeout(() => {
-        hasDraggedRef.current = false;
-        if (!isDraggingRef.current) {
-          isPausedRef.current = false;
-        }
-      }, 1200);
-    }
+  const handleMouseUp = () => {
+    isDraggingRef.current = false;
+    setTimeout(() => {
+      hasDraggedRef.current = false;
+    }, 100);
+  };
+
+  const handleMouseEnter = () => {
+    isPausedRef.current = true;
+  };
+
+  const handleMouseLeave = () => {
+    isDraggingRef.current = false;
+    hasDraggedRef.current = false;
+    isPausedRef.current = false;
   };
 
   return (
@@ -216,11 +228,11 @@ export default function Achievements() {
           ref={scrollContainerRef}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUpOrLeave}
-          onMouseLeave={handleMouseUpOrLeave}
-          onMouseEnter={() => { isPausedRef.current = true; }}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+          onMouseEnter={handleMouseEnter}
           onTouchStart={() => { isPausedRef.current = true; }}
-          onTouchEnd={() => { setTimeout(() => { isPausedRef.current = false; }, 1500); }}
+          onTouchEnd={() => { isPausedRef.current = false; }}
           className="flex flex-row items-center gap-6 overflow-x-auto select-none py-2 px-6 no-scrollbar cursor-grab active:cursor-grabbing"
           style={{
             scrollbarWidth: "none",
