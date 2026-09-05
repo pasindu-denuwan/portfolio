@@ -68,7 +68,7 @@ function OrganizationLogoBadge({ type }: { type: "rotaract" | "leo" | "ieee" }) 
       return (
         <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20 overflow-hidden">
           <img
-            src={resolveSrc("/assets/rotaract.png")}
+            src={resolveSrc("/assets/rotaract.webp")}
             alt="Rotaract Club of Sabaragamuwa University of Sri Lanka"
             className="w-full h-full object-contain"
           />
@@ -78,7 +78,7 @@ function OrganizationLogoBadge({ type }: { type: "rotaract" | "leo" | "ieee" }) 
       return (
         <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20 overflow-hidden">
           <img
-            src={resolveSrc("/assets/leo.jpg")}
+            src={resolveSrc("/assets/leo.webp")}
             alt="Leo Club of Sabaragamuwa University of Sri Lanka"
             className="w-full h-full object-contain"
           />
@@ -88,7 +88,7 @@ function OrganizationLogoBadge({ type }: { type: "rotaract" | "leo" | "ieee" }) 
       return (
         <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20 overflow-hidden">
           <img
-            src={resolveSrc("/assets/ieee-cs.png")}
+            src={resolveSrc("/assets/ieee-cs.webp")}
             alt="IEEE Computer Society Chapter, SUSL"
             className="w-full h-full object-contain"
           />

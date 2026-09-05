@@ -92,7 +92,7 @@ export default function Hero() {
           <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full animate-float shadow-[0_0_60px_rgba(27,44,193,0.5)] overflow-hidden">
             <video
               src={resolveSrc("/assets/pasinduDenuwan.mp4")}
-              poster={resolveSrc("/assets/1.png")}
+              poster={resolveSrc("/assets/1.webp")}
               autoPlay
               muted
               playsInline

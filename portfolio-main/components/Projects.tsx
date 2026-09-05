@@ -21,7 +21,7 @@ const projects = [
     description: "A modern collaborative web application designed to manage team milestones, track project deadlines, and organize sprint tasks with an intuitive, responsive interface.",
     technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
     githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/doit.png"
+    image: "/assets/doit.webp"
   },
   {
     id: "proj-2",
@@ -31,7 +31,7 @@ const projects = [
     description: "An online booking & inventory system built using Java and core OOP principles, featuring multi-tier class architecture, reservation management, and relational SQL database schema.",
     technologies: ["Java", "OOP Design", "MySQL", "GUI / Swing", "Database Schema"],
     githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/project1.png"
+    image: "/assets/project1.webp"
   },
   {
     id: "proj-3",
@@ -41,7 +41,7 @@ const projects = [
     description: "A dynamic real-time weather analytics dashboard integrating third-party REST APIs, geolocation tracking, and visual meteorological forecasts.",
     technologies: ["JavaScript", "REST APIs", "Tailwind CSS", "Data Visualization"],
     githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/weather.jpg"
+    image: "/assets/weather.webp"
   },
   {
     id: "proj-4",
@@ -51,7 +51,7 @@ const projects = [
     description: "Awarded 1st Runner Up in the CRYPTX inter-university designathon. Features an end-to-end user research framework, wireframes, accessible design system, and high-fidelity prototype in Figma.",
     technologies: ["Figma", "User Research", "Wireframing", "Design System", "Prototyping"],
     githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/cinnamon.jpg"
+    image: "/assets/cinnamon.webp"
   },
   {
     id: "proj-5",
@@ -61,7 +61,7 @@ const projects = [
     description: "A complete mobile and web interface design concept for agricultural inventory, harvest tracking, and supply chain management with user-tested mobile flows.",
     technologies: ["Figma", "Interactive UX", "Mobile Design", "Information Architecture"],
     githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/project4.png"
+    image: "/assets/project4.webp"
   },
   {
     id: "proj-6",
@@ -71,7 +71,7 @@ const projects = [
     description: "A cross-platform mobile application concept tailored for university students to track lecture schedules, academic grades, faculty notices, and campus events in real time.",
     technologies: ["React Native", "TypeScript", "Mobile UI", "REST APIs", "Firebase"],
     githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/project3.png"
+    image: "/assets/project3.webp"
   },
   {
     id: "proj-7",
@@ -81,7 +81,7 @@ const projects = [
     description: "A two-player arcade Pong game engineered in C++ with custom 2D collision detection algorithms, paddle velocity mechanics, high-performance rendering loop, and real-time score tracking.",
     technologies: ["C++", "Game Physics", "Collision Algorithms", "Data Structures", "OOP"],
     githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/project2.png"
+    image: "/assets/project2.webp"
   }
 ];
 

@@ -11,7 +11,7 @@ const certificates: Certificate[] = [
     issuer: "1st Runner Up",
     year: "2026",
     category: "Designathon Award",
-    image: "/assets/certificates/image-1.png",
+    image: "/assets/certificates/image-1.webp",
   },
   {
     id: "cert-2",
@@ -19,7 +19,7 @@ const certificates: Certificate[] = [
     issuer: "MAS Holdings",
     year: "2026",
     category: "Professional Workshop",
-    image: "/assets/certificates/image-2.png",
+    image: "/assets/certificates/image-2.webp",
   },
   {
     id: "cert-3",
@@ -27,7 +27,7 @@ const certificates: Certificate[] = [
     issuer: "DevOps Course",
     year: "2025",
     category: "CI/CD & Automation",
-    image: "/assets/certificates/image-3.png",
+    image: "/assets/certificates/image-3.webp",
   },
   {
     id: "cert-4",
@@ -35,7 +35,7 @@ const certificates: Certificate[] = [
     issuer: "Postman",
     year: "2026",
     category: "API Architecture",
-    image: "/assets/certificates/image-4.png",
+    image: "/assets/certificates/image-4.webp",
   },
   {
     id: "cert-5",
@@ -43,7 +43,7 @@ const certificates: Certificate[] = [
     issuer: "University of Moratuwa",
     year: "2026",
     category: "Coding Challenge",
-    image: "/assets/certificates/image-5.png",
+    image: "/assets/certificates/image-5.webp",
   },
   {
     id: "cert-6",
@@ -51,7 +51,7 @@ const certificates: Certificate[] = [
     issuer: "HackerRank",
     year: "2026",
     category: "Database Mastery",
-    image: "/assets/certificates/image-6.png",
+    image: "/assets/certificates/image-6.webp",
   }
 ];
 

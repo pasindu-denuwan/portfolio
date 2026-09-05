@@ -34,9 +34,9 @@ Portofolio/
 ├── data/
 │   └── content.json             # Central JSON content store (Pasindu Denuwan profile data)
 └── public/assets/
-    ├── pasinduDenuwan.png       # Hero portrait asset (Pasindu Denuwan)
-    ├── project1.png             # Java OOP Bookstore System preview
-    └── project2.png             # C++ Pong Game preview
+    ├── 1.webp                   # Hero portrait asset (Pasindu Denuwan)
+    ├── project1.webp             # Java OOP Bookstore System preview
+    └── project2.webp             # C++ Pong Game preview
 ```
 
 ---

@@ -10,21 +10,21 @@ const resolveSrc = (path: string) => {
 };
 
 const galleryImages = [
-  { src: resolveSrc("/assets/gallery/image1.jpg"), alt: "Volunteering", size: "large" },
-  { src: resolveSrc("/assets/gallery/image2.jpeg"), alt: "OrganizingCommittee", size: "medium" },
-  { src: resolveSrc("/assets/gallery/image3.jpeg"), alt: "Leadership", size: "small" },
-  { src: resolveSrc("/assets/gallery/image4.jpg"), alt: "Leadership", size: "large" },
-  { src: resolveSrc("/assets/gallery/image5.jpeg"), alt: "appointment", size: "medium" },
-  { src: resolveSrc("/assets/gallery/image6.jpeg"), alt: "Leadership", size: "small" },
-  { src: resolveSrc("/assets/gallery/image7.jpeg"), alt: "OrganizingCommittee", size: "large" },
-  { src: resolveSrc("/assets/gallery/image8.jpeg"), alt: "Appreciation", size: "medium" },
-  { src: resolveSrc("/assets/gallery/image9.jpeg"), alt: "Entertainment", size: "small" },
-  { src: resolveSrc("/assets/gallery/image10.jpeg"), alt: "Volunteering", size: "large" },
-  { src: resolveSrc("/assets/gallery/image11.jpg"), alt: "Achievement", size: "large" },
-  { src: resolveSrc("/assets/gallery/image12.jpeg"), alt: "Leadership", size: "medium" },
-  { src: resolveSrc("/assets/gallery/image13.jpeg"), alt: "Volunteering", size: "small" },
-  { src: resolveSrc("/assets/gallery/image14.jpg"), alt: "Achievement", size: "large" },
-  { src: resolveSrc("/assets/gallery/image15.jpeg"), alt: "Leadership", size: "small" },
+  { src: resolveSrc("/assets/gallery/image1.webp"), alt: "Volunteering", size: "large" },
+  { src: resolveSrc("/assets/gallery/image2.webp"), alt: "OrganizingCommittee", size: "medium" },
+  { src: resolveSrc("/assets/gallery/image3.webp"), alt: "Leadership", size: "small" },
+  { src: resolveSrc("/assets/gallery/image4.webp"), alt: "Leadership", size: "large" },
+  { src: resolveSrc("/assets/gallery/image5.webp"), alt: "appointment", size: "medium" },
+  { src: resolveSrc("/assets/gallery/image6.webp"), alt: "Leadership", size: "small" },
+  { src: resolveSrc("/assets/gallery/image7.webp"), alt: "OrganizingCommittee", size: "large" },
+  { src: resolveSrc("/assets/gallery/image8.webp"), alt: "Appreciation", size: "medium" },
+  { src: resolveSrc("/assets/gallery/image9.webp"), alt: "Entertainment", size: "small" },
+  { src: resolveSrc("/assets/gallery/image10.webp"), alt: "Volunteering", size: "large" },
+  { src: resolveSrc("/assets/gallery/image11.webp"), alt: "Achievement", size: "large" },
+  { src: resolveSrc("/assets/gallery/image12.webp"), alt: "Leadership", size: "medium" },
+  { src: resolveSrc("/assets/gallery/image13.webp"), alt: "Volunteering", size: "small" },
+  { src: resolveSrc("/assets/gallery/image14.webp"), alt: "Achievement", size: "large" },
+  { src: resolveSrc("/assets/gallery/image15.webp"), alt: "Leadership", size: "small" },
 ];
 
 export default function Gallery() {
