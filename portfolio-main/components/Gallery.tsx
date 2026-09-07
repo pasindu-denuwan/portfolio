@@ -25,6 +25,7 @@ const galleryImages = [
   { src: resolveSrc("/assets/gallery/image13.webp"), alt: "Volunteering", size: "small" },
   { src: resolveSrc("/assets/gallery/image14.webp"), alt: "Achievement", size: "large" },
   { src: resolveSrc("/assets/gallery/image15.webp"), alt: "Leadership", size: "small" },
+  { src: resolveSrc("/assets/gallery/image16.webp"), alt: "Achievement", size: "large" },
 ];
 
 export default function Gallery() {
