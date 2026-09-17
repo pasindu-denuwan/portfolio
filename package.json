@@ -7,6 +7,7 @@
     "build": "npm run build --prefix portfolio-main",
     "start": "npm run start --prefix portfolio-main",
     "lint": "npm run lint --prefix portfolio-main"
+ 
   }
   
 }
