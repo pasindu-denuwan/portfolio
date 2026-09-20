@@ -4,9 +4,9 @@ import { Camera } from "lucide-react";
 import SpotlightCard from "./ui/SpotlightCard";
 
 const resolveSrc = (path: string) => {
-  const isProd = process.env.NODE_ENV === "production";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const clean = path.replace(/^\/portfolio/, "");
-  return isProd ? `/portfolio${clean}` : clean;
+  return `${basePath}${clean}`;
 };
 
 const galleryImages = [

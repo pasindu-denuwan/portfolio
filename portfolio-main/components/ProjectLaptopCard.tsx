@@ -21,9 +21,9 @@ export default function ProjectLaptopCard({
   // Normalize image path for both local dev and GitHub Pages production
   const resolveSrc = (path?: string) => {
     if (!path) return "";
-    const isProd = process.env.NODE_ENV === "production";
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
     const clean = path.replace(/^\/portfolio/, "");
-    return isProd ? `/portfolio${clean}` : clean;
+    return `${basePath}${clean}`;
   };
 
   return (

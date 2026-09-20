@@ -60,9 +60,9 @@ export default function CertificateCard({ certificate, isExpanded, onToggle }: C
   // Normalize image path for both local dev and GitHub Pages production
   const resolveSrc = (path?: string) => {
     if (!path) return "";
-    const isProd = process.env.NODE_ENV === "production";
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
     const clean = path.replace(/^\/portfolio/, "");
-    return isProd ? `/portfolio${clean}` : clean;
+    return `${basePath}${clean}`;
   };
 
   // We use Framer Motion's useMotionTemplate to construct the radial gradient string dynamically
