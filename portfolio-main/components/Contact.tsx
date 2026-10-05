@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Mail, Linkedin, Github, MapPin, Send, GraduationCap, Phone, MessageSquare } from "lucide-react";
 
 export default function Contact() {
+  
   return (
     <section id="contact" className="py-14 md:py-16 px-6 md:px-12 relative z-10">
       <div className="max-w-7xl mx-auto">
