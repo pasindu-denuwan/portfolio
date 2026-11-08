@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, Linkedin, Mail, Download, ArrowRight } from "lucide-react";
-import TransparentVideo from "@/components/ui/TransparentVideo";
 
 const resolveSrc = (path: string) => {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -89,12 +88,20 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="relative flex justify-center items-center order-1 md:order-2 mt-8 md:mt-0"
         >
-          {/* Profile Video with Background Removed */}
-          <TransparentVideo
-            src={resolveSrc("/assets/pasinduDenuwan.mp4")}
-            poster={resolveSrc("/assets/1.webp")}
-            className="w-80 h-[24rem] sm:w-96 sm:h-[28rem] md:w-[32rem] md:h-[35rem] lg:w-[34rem] lg:h-[38rem] animate-float"
-          />
+          {/* Profile Cutout Image with Bottom Fade */}
+          <div
+            className="relative w-72 sm:w-88 md:w-[26rem] lg:w-[30rem] xl:w-[32rem] animate-float"
+            style={{
+              WebkitMaskImage: "linear-gradient(to bottom, black 82%, transparent 100%)",
+              maskImage: "linear-gradient(to bottom, black 82%, transparent 100%)",
+            }}
+          >
+            <img
+              src={resolveSrc("/assets/1.webp")}
+              alt="Pasindu Denuwan"
+              className="w-full h-auto object-contain drop-shadow-[0_20px_60px_rgba(27,44,193,0.45)] pointer-events-none select-none"
+            />
+          </div>
 
           {/* Floating Glass Card */}
           <motion.div
