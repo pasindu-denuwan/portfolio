@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, Linkedin, Mail, Download, ArrowRight } from "lucide-react";
+import TransparentVideo from "@/components/ui/TransparentVideo";
 
 const resolveSrc = (path: string) => {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -88,24 +89,18 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="relative flex justify-center items-center order-1 md:order-2 mt-8 md:mt-0"
         >
-          {/* Circular Frame with Glow */}
-          <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full animate-float shadow-[0_0_60px_rgba(27,44,193,0.5)] overflow-hidden">
-            <video
-              src={resolveSrc("/assets/pasinduDenuwan.mp4")}
-              poster={resolveSrc("/assets/1.webp")}
-              autoPlay
-              muted
-              playsInline
-              preload="auto"
-              className="w-full h-full rounded-full object-cover"
-            />
-          </div>
+          {/* Profile Video with Background Removed */}
+          <TransparentVideo
+            src={resolveSrc("/assets/pasinduDenuwan.mp4")}
+            poster={resolveSrc("/assets/1.webp")}
+            className="w-80 h-[24rem] sm:w-96 sm:h-[28rem] md:w-[32rem] md:h-[35rem] lg:w-[34rem] lg:h-[38rem] animate-float"
+          />
 
           {/* Floating Glass Card */}
           <motion.div
             animate={{ y: [-10, 10, -10] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            className="absolute -bottom-2 md:-bottom-4 -left-6 md:-left-12 glass-card p-4 px-5 rounded-2xl shadow-2xl z-20"
+            className="absolute -bottom-3 md:-bottom-5 -left-4 md:-left-8 glass-card p-4 px-5 rounded-2xl shadow-2xl z-20"
           >
             <p className="text-xs text-secondary font-semibold">Undergraduate</p>
             <p className="text-white font-bold text-sm sm:text-base mt-1 whitespace-nowrap">B.Sc (Hons) in Computing and Information Systems</p>
