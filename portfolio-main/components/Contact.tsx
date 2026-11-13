@@ -39,7 +39,7 @@ export default function Contact() {
           >
             {/* Email Card */}
             <a 
-              href="mailto:pasindudenuwan@gmail.com"
+              href="mailto:denuwan672@gmail.com"
               className="glass-card p-4 sm:p-4.5 rounded-2xl border border-primary/30 hover:border-secondary/60 hover:shadow-[0_8px_30px_rgba(27,44,193,0.35)] hover:-translate-y-0.5 transition-all duration-300 group flex items-center gap-4 min-w-0"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center text-accent group-hover:bg-primary/40 group-hover:border-secondary/60 group-hover:scale-105 group-hover:shadow-[0_0_16px_rgba(118,146,255,0.4)] transition-all duration-300 flex-shrink-0">
@@ -48,7 +48,7 @@ export default function Contact() {
               <div className="min-w-0 flex-1">
                 <h4 className="text-secondary/80 text-xs font-semibold uppercase tracking-wider mb-0.5">Email</h4>
                 <p className="text-white font-medium text-sm sm:text-base group-hover:text-accent transition-colors truncate">
-                  pasindudenuwan@gmail.com
+                  denuwan672@gmail.com
                 </p>
               </div>
             </a>

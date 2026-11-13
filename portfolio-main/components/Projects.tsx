@@ -37,7 +37,7 @@ const projects = [
     title: "Bookstore Booking & Inventory System",
     categoryType: "web",
     category: "Web Project",
-    description: "An online booking & inventory system built using Java and core OOP principles, featuring multi-tier class architecture, reservation management, and relational SQL database schema.",
+    description: "A modern, high-performance Next.js web application for the IEEE Computer Society Chapter at Sabaragamuwa University of Sri Lanka, converted from the static HTML project.",
     technologies: ["Java", "OOP Design", "MySQL", "GUI / Swing", "Database Schema"],
     githubUrl: "https://github.com/pasindu-denuwan",
     image: "/assets/web2.png"

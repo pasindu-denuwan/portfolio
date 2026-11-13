@@ -78,7 +78,7 @@ export default function Hero() {
           <div className="flex gap-4 mt-6 text-secondary">
             <a href="https://github.com/pasindu-denuwan" target="_blank" className="hover:text-accent transition-colors"><Github /></a>
             <a href="https://linkedin.com/in/pasindu-denuwan" target="_blank" className="hover:text-accent transition-colors"><Linkedin /></a>
-            <a href="mailto:pasindudenuwan@gmail.com" className="hover:text-accent transition-colors"><Mail /></a>
+            <a href="mailto:denuwan672@gmail.com" className="hover:text-accent transition-colors"><Mail /></a>
           </div>
         </motion.div>
 

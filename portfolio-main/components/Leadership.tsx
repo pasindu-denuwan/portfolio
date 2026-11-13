@@ -54,7 +54,7 @@ const leadershipTimeline: LeadershipTimelineItem[] = [
   },
   {
     id: "lead-5",
-    role: "Public Relations Chair",
+    role: "Public Visibility Chair",
     organization: "IEEE Computer Society Chapter, SUSL",
     period: "2025 – 2026",
     badge: "Former",
