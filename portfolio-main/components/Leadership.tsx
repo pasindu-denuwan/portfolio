@@ -21,6 +21,14 @@ interface LeadershipTimelineItem {
 
 const leadershipTimeline: LeadershipTimelineItem[] = [
   {
+    id: "lead-3",
+    role: "Chairperson",
+    organization: "IEEE Computer Society Chapter, SUSL",
+    period: "2026 – 2027",
+    badge: "Current",
+    type: "ieee"
+  },
+  {
     id: "lead-1",
     role: "Vice President",
     organization: "Rotaract Club of Sabaragamuwa University of Sri Lanka",
@@ -35,14 +43,6 @@ const leadershipTimeline: LeadershipTimelineItem[] = [
     period: "2026 – 2027",
     badge: "Current",
     type: "leo"
-  },
-  {
-    id: "lead-3",
-    role: "Vice President",
-    organization: "IEEE Computer Society Chapter, SUSL",
-    period: "2026 – 2027",
-    badge: "Current",
-    type: "ieee"
   },
   {
     id: "lead-4",
