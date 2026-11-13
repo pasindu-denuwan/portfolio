@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { Github, ExternalLink, Code, Sparkles } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Github, ExternalLink, Code, Sparkles, X } from "lucide-react";
 
 interface ProjectProps {
   title: string;
@@ -17,6 +17,7 @@ export default function ProjectLaptopCard({
   title, description, technologies, githubUrl, demoUrl, category, image
 }: ProjectProps) {
   const [imgError, setImgError] = useState(false);
+  const [showFullDesc, setShowFullDesc] = useState(false);
 
   // Normalize image path for both local dev and GitHub Pages production
   const resolveSrc = (path?: string) => {
@@ -71,7 +72,7 @@ export default function ProjectLaptopCard({
       </div>
 
       {/* Card Content Details - Compact & Aligned */}
-      <div className="p-4 sm:p-5 flex flex-col justify-between flex-1 gap-3">
+      <div className="relative p-4 sm:p-5 flex flex-col justify-between flex-1 gap-3">
         <div className="space-y-1.5">
           {/* Category Tag */}
           {category && (
@@ -84,9 +85,31 @@ export default function ProjectLaptopCard({
             {title}
           </h3>
 
-          <p className="text-secondary/90 text-xs leading-relaxed line-clamp-2">
-            {description}
-          </p>
+          {/* Description Container: Fixed height, scrollable in-place with Read full toggle */}
+          <div className="relative">
+            <div
+              className="h-11 overflow-y-auto pr-1 text-secondary/90 text-xs leading-relaxed select-text"
+              style={{
+                scrollbarWidth: "thin",
+                scrollbarColor: "rgba(118, 146, 255, 0.4) transparent",
+              }}
+            >
+              {description}
+            </div>
+            {description.length > 90 && (
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowFullDesc(true);
+                }}
+                className="text-[10px] text-accent hover:text-white font-medium hover:underline inline-flex items-center gap-0.5 mt-0.5 transition-colors cursor-pointer"
+              >
+                <span>Read full</span>
+                <span className="text-[9px]">↗</span>
+              </button>
+            )}
+          </div>
         </div>
 
         <div className="space-y-3 pt-1">
@@ -133,6 +156,57 @@ export default function ProjectLaptopCard({
             )}
           </div>
         </div>
+
+        {/* Full Description Overlay inside card - Zero card size change */}
+        <AnimatePresence>
+          {showFullDesc && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.2 }}
+              className="absolute inset-0 bg-dark/95 backdrop-blur-xl p-4 sm:p-5 rounded-2xl z-30 flex flex-col justify-between border border-secondary/40 shadow-2xl"
+            >
+              <div
+                className="space-y-2 overflow-y-auto pr-1"
+                style={{
+                  scrollbarWidth: "thin",
+                  scrollbarColor: "rgba(118, 146, 255, 0.4) transparent",
+                }}
+              >
+                <div className="flex items-center justify-between pb-1 border-b border-primary/20">
+                  <span className="text-[10px] font-bold text-accent uppercase tracking-wider truncate max-w-[200px]">
+                    {title}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setShowFullDesc(false);
+                    }}
+                    className="w-5 h-5 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+                    aria-label="Close"
+                  >
+                    <X className="w-3 h-3" />
+                  </button>
+                </div>
+                <p className="text-white/90 text-xs leading-relaxed pt-1">
+                  {description}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowFullDesc(false);
+                }}
+                className="text-[11px] font-semibold text-secondary hover:text-accent text-center pt-2 border-t border-primary/20 transition-colors cursor-pointer"
+              >
+                Close
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.div>
   );

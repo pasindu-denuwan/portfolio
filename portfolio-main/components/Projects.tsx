@@ -15,23 +15,32 @@ const filterCategories = [
 const projects = [
   {
     id: "proj-1",
-    title: "Collaborative Task Management Platform",
+    title: "rotaractsusl.org",
     categoryType: "web",
-    category: "Full-Stack Web",
-    description: "A modern collaborative web application designed to manage team milestones, track project deadlines, and organize sprint tasks with an intuitive, responsive interface.",
-    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
+    category: "Web Project",
+    description: "The official website and digital platform for the Rotaract Club of Sabaragamuwa University of Sri Lanka. The project brings the club's public information, projects, events, gallery, membership-related pages, and administrative tools together in one place.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Firebase Auth",
+      "Cloud Firestore",
+      "Firebase Storage"
+    ],
     githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/doit.webp"
+    demoUrl: "https://rotaractsusl.org",
+    image: "/assets/web1.png"
   },
   {
     id: "proj-2",
     title: "Bookstore Booking & Inventory System",
     categoryType: "web",
-    category: "Web & Enterprise",
+    category: "Web Project",
     description: "An online booking & inventory system built using Java and core OOP principles, featuring multi-tier class architecture, reservation management, and relational SQL database schema.",
     technologies: ["Java", "OOP Design", "MySQL", "GUI / Swing", "Database Schema"],
     githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/project1.webp"
+    image: "/assets/web2.png"
   },
   {
     id: "proj-3",
