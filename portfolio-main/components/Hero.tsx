@@ -28,7 +28,7 @@ export default function Hero() {
   const currentRole = roles[roleIndex % roles.length];
 
   return (
-    <section id="home" className="min-h-screen lg:min-h-0 lg:h-screen flex items-center justify-center pt-20 md:pt-24 pb-6 md:pb-8 px-6 md:px-12 relative z-10">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-24 md:pt-28 pb-10 md:pb-14 px-6 md:px-12 relative z-10">
       <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -96,16 +96,16 @@ export default function Hero() {
         >
           {/* Profile Cutout Image with Bottom Fade */}
           <div
-            className="relative w-80 sm:w-88 md:w-[27rem] lg:w-[30rem] xl:w-[33rem] max-h-[64vh] md:max-h-[70vh] flex items-center justify-center animate-float"
+            className="relative w-[26rem] sm:w-[30rem] md:w-[36rem] lg:w-[42rem] xl:w-[48rem] max-h-[78vh] md:max-h-[85vh] lg:max-h-[88vh] flex items-center justify-center animate-float"
             style={{
-              WebkitMaskImage: "linear-gradient(to bottom, black 82%, transparent 100%)",
-              maskImage: "linear-gradient(to bottom, black 82%, transparent 100%)",
+              WebkitMaskImage: "linear-gradient(to bottom, black 85%, transparent 100%)",
+              maskImage: "linear-gradient(to bottom, black 85%, transparent 100%)",
             }}
           >
             <img
               src={resolveSrc("/assets/1.webp")}
               alt="Pasindu Denuwan"
-              className="w-full max-h-[64vh] md:max-h-[70vh] object-contain pointer-events-none select-none"
+              className="w-full max-h-[78vh] md:max-h-[85vh] lg:max-h-[88vh] object-contain pointer-events-none select-none scale-115 md:scale-120"
               style={{
                 filter:
                   "drop-shadow(1.5px 0 0 rgba(255, 255, 255, 0.9)) drop-shadow(-1.5px 0 0 rgba(255, 255, 255, 0.9)) drop-shadow(0 1.5px 0 rgba(255, 255, 255, 0.9)) drop-shadow(0 -1.5px 0 rgba(255, 255, 255, 0.9)) drop-shadow(1px 1px 0 rgba(255, 255, 255, 0.9)) drop-shadow(-1px -1px 0 rgba(255, 255, 255, 0.9)) drop-shadow(1px -1px 0 rgba(255, 255, 255, 0.9)) drop-shadow(-1px 1px 0 rgba(255, 255, 255, 0.9)) drop-shadow(0 20px 60px rgba(27, 44, 193, 0.45))",
@@ -117,7 +117,7 @@ export default function Hero() {
           <motion.div
             animate={{ y: [-8, 8, -8] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            className="absolute bottom-2 md:bottom-3 -left-3 md:-left-8 glass-card p-4 sm:p-5 px-5 sm:px-6 rounded-2xl shadow-2xl z-20"
+            className="absolute -bottom-1 md:bottom-2 -left-2 md:-left-8 glass-card p-4 sm:p-5 px-5 sm:px-6 rounded-2xl shadow-2xl z-20"
           >
             <p className="text-xs sm:text-sm text-secondary font-semibold">Undergraduate</p>
             <p className="text-white font-bold text-sm sm:text-lg mt-1 whitespace-nowrap">B.Sc (Hons) in Computing and Information Systems</p>

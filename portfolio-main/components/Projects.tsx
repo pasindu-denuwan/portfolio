@@ -8,8 +8,7 @@ const filterCategories = [
   { id: "all", label: "All Projects" },
   { id: "web", label: "Web Projects" },
   { id: "uiux", label: "UI / UX Designs" },
-  { id: "software", label: "Software" },
-  { id: "others", label: "Others" }
+  { id: "software", label: "Software" }
 ];
 
 const projects = [
@@ -112,16 +111,6 @@ const projects = [
     technologies: ["C#", "SQL", ".NET Framework 4.8"],
     githubUrl: "https://github.com/pasindu-denuwan/Campus-One-Digital-Academy",
     image: "/assets/soft1.webp"
-  },
-  {
-    id: "proj-10",
-    title: "Pong Arcade Game & 2D Physics Engine",
-    categoryType: "others",
-    category: "C++ Game Engine",
-    description: "A two-player arcade Pong game engineered in C++ with custom 2D collision detection algorithms, paddle velocity mechanics, high-performance rendering loop, and real-time score tracking.",
-    technologies: ["C++", "Game Physics", "Collision Algorithms", "Data Structures", "OOP"],
-    githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/project2.webp"
   }
 ];
 
