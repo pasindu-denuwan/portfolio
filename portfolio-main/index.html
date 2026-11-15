@@ -2,12 +2,14 @@
 <html lang="en" data-theme="dark">
 
 <head>
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pasindu Denuwan</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23091540'/%3E%3Crect width='60' height='60' x='2' y='2' rx='14' fill='none' stroke='%231B2CC1' stroke-width='2' stroke-opacity='0.6'/%3E%3Ctext x='32' y='42.5' font-family='system-ui, -apple-system, Segoe UI, Roboto, sans-serif' font-size='29' font-weight='800' fill='%23ABD2FA' text-anchor='middle' letter-spacing='1'%3EPD%3C/text%3E%3C/svg%3E">
-  <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23091540'/%3E%3Crect width='60' height='60' x='2' y='2' rx='14' fill='none' stroke='%231B2CC1' stroke-width='2' stroke-opacity='0.6'/%3E%3Ctext x='32' y='42.5' font-family='system-ui, -apple-system, Segoe UI, Roboto, sans-serif' font-size='29' font-weight='800' fill='%23ABD2FA' text-anchor='middle' letter-spacing='1'%3EPD%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23091540'/%3E%3Crect width='60' height='60' x='2' y='2' rx='14' fill='none' stroke='%231B2CC1' stroke-width='2' stroke-opacity='0.6'/%3E%3Ctext x='32' y='42.5' font-family='system-ui, -apple-system, Segoe UI, Roboto, sans-serif' font-size='29' font-weight='800' fill='%23ABD2FA' text-anchor='middle' letter-spacing='1'%3EPD%3C/text%3E%3C/svg%3E">
+  <link rel="shortcut icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23091540'/%3E%3Crect width='60' height='60' x='2' y='2' rx='14' fill='none' stroke='%231B2CC1' stroke-width='2' stroke-opacity='0.6'/%3E%3Ctext x='32' y='42.5' font-family='system-ui, -apple-system, Segoe UI, Roboto, sans-serif' font-size='29' font-weight='800' fill='%23ABD2FA' text-anchor='middle' letter-spacing='1'%3EPD%3C/text%3E%3C/svg%3E">
   <link rel="alternate icon" href="favicon.ico?v=4">
   <meta name="description"
     content="Official portfolio of Pasindu Denuwan - B.Sc (Hons) in Computing and Information Systems undergraduate at Sabaragamuwa University of Sri Lanka . Explore projects, skills, education, experience, and certifications.">
@@ -19,7 +21,7 @@
     content="Data & Technology Enthusiast | Undergraduate at Sabaragamuwa University of Sri Lanka.">
   <meta property="og:type" content="website">
 
-  
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -29,9 +31,29 @@
 
 <body>
 
-  <!-- Animated Loading Screen: Pasindu Denuwan (Full Screen) -->
-  <div id="preloader" class="preloader" style="position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 99999; margin: 0; padding: 0; overflow: hidden; background: #091540;">
-    <img src="assets/Loading.webp" alt="Loading" style="width: 100%; height: 100%; object-fit: cover; object-position: center; pointer-events: none; user-select: none;">
+  <!-- Animated Loading Screen: Pasindu Denuwan (16:9 Code Poster) -->
+  <div id="preloader" class="preloader"
+    style="position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 99999; margin: 0; padding: 12px; overflow: hidden; background: radial-gradient(ellipse at 50% 45%, #002d8e 0%, #00164c 50%, #000618 100%); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div
+      style="position: relative; width: 100%; max-width: 1240px; aspect-ratio: 16/9; max-height: 88vh; display: flex; align-items: center; justify-content: center; user-select: none;">
+      <div
+        style="position: absolute; left: 12%; right: 12%; top: 29%; z-index: 1; font-weight: 900; letter-spacing: 0.04em; color: transparent; -webkit-text-stroke: clamp(2px, 0.28vw, 4.5px) #ffffff; font-size: clamp(2.5rem, 11.5vw, 10.5rem); line-height: 1; text-transform: uppercase; text-align: center; filter: drop-shadow(0 0 10px rgba(0, 220, 255, 0.7)) drop-shadow(0 0 25px rgba(27, 44, 193, 0.5));">
+        PASINDU
+      </div>
+      <div style="position: absolute; left: 50%; transform: translateX(-50%); top: 16.5%; bottom: 11.5%; z-index: 2; display: flex; align-items: center; justify-content: center;">
+        <img src="assets/loading-portrait.webp" alt="Pasindu Denuwan"
+          style="position: relative; z-index: 2; height: 100%; width: auto; object-fit: contain; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.95));">
+        <div style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); width: 140%; height: 120px; background: radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, transparent 75%); filter: blur(30px); pointer-events: none; z-index: -1;"></div>
+      </div>
+      <div
+        style="position: absolute; left: 6%; right: 6%; top: 64%; z-index: 3; font-weight: 900; letter-spacing: 0.01em; color: #ffffff; font-size: clamp(2.5rem, 11.5vw, 10.5rem); line-height: 1; text-transform: uppercase; text-align: center; filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.95)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.8));">
+        DENUWAN
+      </div>
+    </div>
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; width: 100%; height: 40vh; background: linear-gradient(to top, #000000 0%, rgba(0,0,0,0.85) 45%, transparent 100%); pointer-events: none; z-index: 25;"></div>
+    <div class="preloader-line"
+      style="margin-top: 12px; width: 220px; height: 3px; background: linear-gradient(90deg, #1B2CC1, #00e5ff, #1B2CC1); border-radius: 9999px; box-shadow: 0 0 20px rgba(0,229,255,0.85); z-index: 40;">
+    </div>
   </div>
 
   <!-- Ambient Glowing Background Elements -->
@@ -117,7 +139,9 @@
           <div class="hero-visual">
             <div class="hero-glow-bg"></div>
             <div class="hero-pasinduDenuwan-frame">
-              <video src="assets/pasinduDenuwan.mp4" poster="assets/1.webp" autoplay muted playsinline id="hero-pasinduDenuwan-video" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></video>
+              <video src="assets/pasinduDenuwan.mp4" poster="assets/1.webp" autoplay muted playsinline
+                id="hero-pasinduDenuwan-video"
+                style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></video>
             </div>
             <div class="hero-floating-card">
               <div class="card-role">Undergraduate</div>
