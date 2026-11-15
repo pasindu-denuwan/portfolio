@@ -86,12 +86,10 @@ function OrganizationLogoBadge({ type }: { type: "rotaract" | "leo" | "ieee" }) 
       );
     case "ieee":
       return (
-        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white flex items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20 overflow-hidden">
-          <img
-            src={resolveSrc("/assets/ieee-cs.webp")}
-            alt="IEEE Computer Society Chapter, SUSL"
-            className="w-full h-full object-contain"
-          />
+        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#00629B] flex items-center justify-center p-1 sm:p-1.5 flex-shrink-0 shadow-md border border-white/20 overflow-hidden">
+          <span className="font-extrabold text-white text-xs sm:text-sm tracking-wider">
+            IEEE
+          </span>
         </div>
       );
   }
