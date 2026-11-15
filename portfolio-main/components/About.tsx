@@ -4,12 +4,12 @@ import { MapPin, GraduationCap, Code2, Target, Lightbulb, Rocket, User } from "l
 
 export default function About() {
   const cards = [
-    { icon: <MapPin className="w-5 h-5" />, title: "Location", value: "Sabaragamuwa / Colombo, Sri Lanka" },
+    { icon: <MapPin className="w-5 h-5" />, title: "Location", value: "Matara / Colombo, Sri Lanka" },
     { icon: <GraduationCap className="w-5 h-5" />, title: "Degree", value: "B.Sc (Hons) in Computing and Information Systems" },
-    { icon: <Code2 className="w-5 h-5" />, title: "Focus", value: "Data Science & Software Engineering" },
-    { icon: <Lightbulb className="w-5 h-5" />, title: "Interests", value: "Python, SQL, Analytics & Web Development" },
-    { icon: <Target className="w-5 h-5" />, title: "Passion", value: "Data Insights & Problem Solving" },
-    { icon: <Rocket className="w-5 h-5" />, title: "Institution", value: "Sabaragamuwa University of Sri Lanka" },
+    { icon: <Code2 className="w-5 h-5" />, title: "Focus", value: "Project Management, UI/UX Design and Quality Assurance" },
+    { icon: <Lightbulb className="w-5 h-5" />, title: "Interests", value: "Figma, Jira, Cypress" },
+    { icon: <Target className="w-5 h-5" />, title: "Passion", value: "Designing, Testing and Problem Solving" },
+    { icon: <Rocket className="w-5 h-5" />, title: "University", value: "Sabaragamuwa University of Sri Lanka" },
   ];
 
   return (
@@ -39,7 +39,7 @@ export default function About() {
           className="glass-card p-6 sm:p-8 md:p-10 rounded-3xl border border-primary/30 hover:border-secondary/40 transition-all duration-300 shadow-2xl"
         >
           <p className="text-white/90 text-base md:text-lg leading-relaxed mb-8 sm:mb-10 text-center max-w-3xl mx-auto">
-            An enthusiastic undergraduate pursuing a B.Sc (Hons) in Computing and Information Systems at the Faculty of Computing, Sabaragamuwa University of Sri Lanka, with a growing interest in data science and analytics. Passionate about learning Python and SQL and continuously improving skills to gain practical experience and create meaningful data driven insights.
+            An enthusiastic undergraduate pursuing a B.Sc (Hons) in Computing and Information Systems at the Faculty of Computing, Sabaragamuwa University of Sri Lanka, with a growing interest in Project Management and UI Designing. Passionate about learning Jira and Postman and continuously improving skills to gain practical experience.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">

@@ -34,23 +34,24 @@ const projects = [
   },
   {
     id: "proj-2",
-    title: "Bookstore Booking & Inventory System",
+    title: "cschaptersusl.org",
     categoryType: "web",
     category: "Web Project",
-    description: "A modern, high-performance Next.js web application for the IEEE Computer Society Chapter at Sabaragamuwa University of Sri Lanka, converted from the static HTML project.",
+    description: "The official website of IEEE Computer Society Chapter at Sabaragamuwa University of Sri Lanka.",
     technologies: ["Java", "OOP Design", "MySQL", "GUI / Swing", "Database Schema"],
     githubUrl: "https://github.com/pasindu-denuwan",
+    demoUrl: "https://www.cschaptersusl.org",
     image: "/assets/web2.png"
   },
   {
     id: "proj-3",
-    title: "Weather & Analytics Dashboard",
+    title: "Pasindu Denuwan",
     categoryType: "web",
-    category: "Web Application",
-    description: "A dynamic real-time weather analytics dashboard integrating third-party REST APIs, geolocation tracking, and visual meteorological forecasts.",
+    category: "Web Project",
+    description: "The Official portfolio web site of my self, using Vanilla HTML5, CSS3, and JavaScript.",
     technologies: ["JavaScript", "REST APIs", "Tailwind CSS", "Data Visualization"],
     githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/weather.webp"
+    image: "/assets/web3.png"
   },
   {
     id: "proj-4",

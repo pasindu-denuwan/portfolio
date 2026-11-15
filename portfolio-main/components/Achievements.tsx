@@ -7,50 +7,50 @@ import CertificateCard, { Certificate } from "./ui/CertificateCard";
 const certificates: Certificate[] = [
   {
     id: "cert-1",
-    title: "CRYPTX Designathon",
-    issuer: "1st Runner Up",
+    title: "Foundation of Project Management",
+    issuer: "University of Moratuwa",
     year: "2026",
-    category: "Designathon Award",
+    category: "Project Management",
     image: "/assets/certificates/image-1.webp",
   },
   {
     id: "cert-2",
-    title: "Skills for Work",
-    issuer: "MAS Holdings",
+    title: "Introduction to Figma",
+    issuer: "Simplilearn",
     year: "2026",
-    category: "Professional Workshop",
+    category: "UI/UX Design",
     image: "/assets/certificates/image-2.webp",
   },
   {
     id: "cert-3",
-    title: "GitHub Actions for Beginners",
-    issuer: "DevOps Course",
+    title: "SQL Basic",
+    issuer: "HackerRank",
     year: "2025",
-    category: "CI/CD & Automation",
+    category: "Database",
     image: "/assets/certificates/image-3.webp",
   },
   {
     id: "cert-4",
-    title: "API Learning 101",
-    issuer: "Postman",
-    year: "2026",
-    category: "API Architecture",
+    title: "CSS (Basic)",
+    issuer: "HackerRank",
+    year: "2024",
+    category: "Web Development",
     image: "/assets/certificates/image-4.webp",
   },
   {
     id: "cert-5",
-    title: "Innovate with Ballerina Coding Challenge",
-    issuer: "University of Moratuwa",
+    title: "JavaScript (Basic)",
+    issuer: "HackerRank",
     year: "2026",
-    category: "Coding Challenge",
+    category: "Programming",
     image: "/assets/certificates/image-5.webp",
   },
   {
     id: "cert-6",
-    title: "SQL Basic",
+    title: "Problem Solving (Basic)",
     issuer: "HackerRank",
     year: "2026",
-    category: "Database Mastery",
+    category: "Problem Solving",
     image: "/assets/certificates/image-6.webp",
   }
 ];
@@ -176,15 +176,15 @@ export default function Achievements() {
   return (
     <section id="achievements" className="py-14 md:py-16 relative z-10 overflow-hidden">
       {/* Background blend */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none z-[-1]"
         style={{
           background: "radial-gradient(circle at 50% 40%, rgba(27, 44, 193, 0.15), transparent 50%)"
         }}
       />
-      
+
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-6">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -242,12 +242,12 @@ export default function Achievements() {
         >
           {/* First set of certificate cards */}
           {certificates.map((cert) => (
-            <div 
-              key={`set1-${cert.id}`} 
+            <div
+              key={`set1-${cert.id}`}
               className="w-[300px] sm:w-[340px] md:w-[380px] flex-shrink-0"
             >
-              <CertificateCard 
-                certificate={cert} 
+              <CertificateCard
+                certificate={cert}
                 isExpanded={expandedId === `set1-${cert.id}`}
                 onToggle={() => handleToggle(`set1-${cert.id}`)}
               />
@@ -256,12 +256,12 @@ export default function Achievements() {
 
           {/* Duplicated set for seamless infinite loop */}
           {certificates.map((cert) => (
-            <div 
-              key={`set2-${cert.id}`} 
+            <div
+              key={`set2-${cert.id}`}
               className="w-[300px] sm:w-[340px] md:w-[380px] flex-shrink-0"
             >
-              <CertificateCard 
-                certificate={cert} 
+              <CertificateCard
+                certificate={cert}
                 isExpanded={expandedId === `set2-${cert.id}`}
                 onToggle={() => handleToggle(`set2-${cert.id}`)}
               />

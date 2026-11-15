@@ -103,10 +103,9 @@ export default function ProjectLaptopCard({
                   e.stopPropagation();
                   setShowFullDesc(true);
                 }}
-                className="text-[10px] text-accent hover:text-white font-medium hover:underline inline-flex items-center gap-0.5 mt-0.5 transition-colors cursor-pointer"
+                className="text-[10px] text-accent hover:text-white font-medium hover:underline inline-flex items-center mt-0.5 transition-colors cursor-pointer"
               >
-                <span>Read full</span>
-                <span className="text-[9px]">↗</span>
+                Read full
               </button>
             )}
           </div>
@@ -148,7 +147,7 @@ export default function ProjectLaptopCard({
                 href={demoUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-primary to-secondary text-white text-[11px] font-bold shadow-md transition-all"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/20 hover:bg-primary/40 border border-primary/40 text-accent hover:text-white text-[11px] font-bold transition-all"
               >
                 <ExternalLink className="w-3 h-3" />
                 <span>Live Demo</span>
