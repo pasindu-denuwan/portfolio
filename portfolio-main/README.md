@@ -1,119 +1,116 @@
-# Pasindu Denuwan - Professional Portfolio & Admin CMS
+# Pasindu Denuwan - Professional Portfolio
 
-A high-performance, dynamic single-page portfolio website and local content administration system built for profile evaluation and showcase. 
-
-Designed using **Vanilla HTML5, CSS3, and JavaScript (ES6+)**, this project requires no build tools or bundlers, making it 100% compatible with free static hosting on **GitHub Pages**.
+A modern, responsive, high-performance personal portfolio website built with **Next.js 14**, **React 18**, **TypeScript**, **Tailwind CSS**, and **Framer Motion** to showcase projects, skills, education, leadership experience, certifications, and academic background.
 
 ---
 
-## 🌟 Key Features
+## Technologies Used
 
-- **10 Profile Sections**: Home, About Me, Skills, Projects, Education, Experience, Certifications, Achievements, Resume Download, and Contact (with Academic Reference).
-- **Dynamic Content Engine**: All public content is dynamically fetched and rendered from `/data/content.json`.
-- **Local Admin Manager (`/admin.html`)**: Interactive CMS interface to add, edit, or delete projects, certifications, skills, education, and work experience with 1-click `content.json` download.
-- **Modern Design System**: High-contrast Dark/Light theme switcher with `localStorage` persistence, glassmorphic card design, floating gradient blobs, micro-animations, and responsive layout.
-- **Project Search & Filtering**: Client-side instant keyword search and tag/category filter system.
-- **Project Detail Modal**: Popups showing granular project descriptions, stack tags, and personal contributions.
-- **Resume Integration**: Direct link & download button for `resume.pdf`.
+### Frontend & Core
+- **[Next.js 14](https://nextjs.org/)** (App Router) — Modern React framework powering server/client component rendering, asset optimization, and SEO metadata.
+- **[React 18](https://react.dev/)** — Declarative component-based UI architecture with hooks and reactive state management.
+- **[TypeScript 5](https://www.typescriptlang.org/)** — End-to-end type safety, robust code quality, and maintainable data structures.
+
+### Styling & Design System
+- **[Tailwind CSS 3](https://tailwindcss.com/)** — Utility-first CSS framework for custom responsive design, fluid typography, and dark mode theming.
+- **Glassmorphic UI Design** — Translucent frosted-glass panels (`glass-panel`, `glass-card`), backdrop blur filters, glowing border accents, and radial ambient lighting.
+- **[Tailwind Merge](https://github.com/dcastil/tailwind-merge) & [clsx](https://github.com/lukeed/clsx)** — Clean, conflict-free conditional class name composition.
+- **PostCSS & Autoprefixer** — Automated CSS post-processing and cross-browser vendor prefixing.
+
+### Animations & Interactivity
+- **[Framer Motion 11](https://www.framer.com/motion/)** — Production-ready animation library providing:
+  - Smooth scroll-triggered viewport animations (`whileInView`)
+  - Rotating role typewriter/slide-fade transitions in the Hero section
+  - Infinite auto-scrolling certificate carousel with drag-to-scroll and manual navigation controls
+  - Interactive micro-interactions and hover animations on cards and buttons
+
+### Iconography & Media
+- **[Lucide React](https://lucide.dev/)** — Clean, lightweight, consistent SVG icon system across all sections.
+- **WebP & PNG Image Optimization** — Next-gen compressed image formats with custom drop-shadow silhouette outlines and bottom-fade masks.
+- **Sharp** — High-performance image processing engine for production builds.
+
+### Development & Tooling
+- **Node.js & npm** — Package management and JavaScript runtime environment.
+- **ESLint & Next.js ESLint Config** — Strict code linting and code quality standards.
 
 ---
 
-## 📁 Directory Structure
+## Project Structure
 
 ```text
-Portofolio/
-├── index.html                   # Public single-page portfolio application
-├── admin.html                   # Local content manager CMS (Form builder)
-├── resume.pdf                   # Downloadable CV document (Pasindu Denuwan)
-├── README.md                    # Setup, maintenance, and deployment documentation
-├── css/
-│   └── style.css                # CSS design system (Theme variables, glassmorphism, responsive styles)
-├── js/
-│   ├── main.js                  # Main site script (JSON fetch, dynamic render, theme, search, modal)
-│   └── admin.js                 # Local admin script (CMS forms, JSON generator & download)
-├── data/
-│   └── content.json             # Central JSON content store (Pasindu Denuwan profile data)
-└── public/assets/
-    ├── 1.webp                   # Hero portrait asset (Pasindu Denuwan)
-    ├── project1.webp             # Java OOP Bookstore System preview
-    └── project2.webp             # C++ Pong Game preview
+portfolio-main/
+├── app/
+│   ├── globals.css              # Global styles, Tailwind directives, glassmorphic utilities
+│   ├── layout.tsx               # Root layout with HTML metadata & SEO title configuration
+│   └── page.tsx                 # Main single-page application orchestrating all sections
+├── components/
+│   ├── About.tsx                # About Me section with key focus cards & biography
+│   ├── Achievements.tsx         # Infinite auto-scroll certificate carousel with drag & controls
+│   ├── Contact.tsx              # Get in Touch cards, academic reference & contact form
+│   ├── EducationTimeline.tsx    # Academic journey & degree timeline
+│   ├── Footer.tsx               # Footer with social links & copyright
+│   ├── Gallery.tsx              # Interactive image gallery
+│   ├── Hero.tsx                 # Hero section with animated rotating roles & cutout portrait
+│   ├── Leadership.tsx           # Extracurricular & volunteering leadership cards
+│   ├── Navbar.tsx               # Floating responsive navigation bar
+│   ├── ProjectLaptopCard.tsx    # Interactive laptop mockup card for project showcases
+│   ├── Projects.tsx             # Filterable project showcase (Web, UI/UX, Mobile, Others)
+│   ├── Skills.tsx               # Technical & professional skills grid
+│   └── ui/
+│       ├── CertificateCard.tsx  # Expandable certificate card with badge & issuer details
+│       └── ScrollProgress.tsx   # Top scroll progress indicator
+├── public/
+│   ├── assets/
+│   │   ├── 1.webp               # Hero portrait cutout asset
+│   │   ├── web1.png             # rotaractsusl.org preview
+│   │   ├── web2.png             # cschaptersusl.org preview
+│   │   ├── web3.png             # Personal portfolio preview
+│   │   ├── web4.png             # Rotary Club of Uva Hills preview
+│   │   ├── certificates/        # Certificate preview assets
+│   │   └── gallery/             # Photo gallery assets
+│   └── resume.pdf               # Downloadable CV document
+├── package.json                 # Dependencies and npm scripts
+├── tailwind.config.ts           # Tailwind configuration (custom colors, fonts, animations)
+└── tsconfig.json                # TypeScript compiler configuration
 ```
 
 ---
 
-## ✏️ How to Edit & Add Portfolio Content
+##  Getting Started
 
-### Option 1: Use the Local Admin Page (`admin.html`) — Recommended
+### Prerequisites
+- **Node.js**: v18.17+ or v20+
+- **npm**: v9+ (or **pnpm** / **yarn**)
 
-1. Open `admin.html` in your web browser (via local web server or file viewer).
-2. Click through the tabs: **Projects**, **Experience**, **Education**, **Certifications**, **Achievements**, **Skills**, or **Profile & Reference**.
-3. Use the **"Add New"** or **"Edit"** buttons to update your information in the friendly form fields.
-4. Click the **"Download updated content.json"** button at the top right.
-5. Replace the existing `data/content.json` file in your repository with the newly downloaded file.
-6. Commit and push your changes to GitHub to go live!
+### Installation
 
-### Option 2: Edit `data/content.json` Directly
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/pasindu-denuwan/portfolio.git
+   cd portfolio/portfolio-main
+   ```
 
-1. Open `data/content.json` in VS Code or any text editor.
-2. Edit or append new JSON objects under the corresponding keys (`projects`, `experience`, `education`, `certifications`, `skills`, `profile`, etc.).
-3. Save the file, commit, and push to GitHub.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
----
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-## 🚀 Step-by-Step GitHub Pages Deployment Guide
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the portfolio.
 
-Follow these exact terminal commands to deploy your portfolio live on GitHub Pages:
+### Building for Production
 
-### Step 1: Create a GitHub Repository
-1. Go to [GitHub New Repository](https://github.com/new).
-2. Set Repository Name: `portfolio`
-3. Set Visibility: **Public**
-4. Do **NOT** initialize with README or .gitignore (this project already includes them).
-5. Click **Create repository**.
-
-### Step 2: Initialize Git & Push Code
-Open your terminal in this project directory and run:
-
+To create an optimized production build:
 ```bash
-# 1. Initialize Git repository
-git init
-
-# 2. Add all files to staging
-git add .
-
-# 3. Create initial commit
-git commit -m "Initial commit: Dynamic portfolio site for Pasindu Denuwan"
-
-# 4. Rename default branch to main
-git branch -M main
-
-# 5. Link your GitHub remote repository (replace with your GitHub username)
-git remote add origin https://github.com/pasindu-denuwan/portfolio.git
-
-# 6. Push code to GitHub
-git push -u origin main
+npm run build
+npm start
 ```
-
-### Step 3: Enable GitHub Pages
-1. Go to your repository on GitHub.
-2. Click **Settings** (top tab bar).
-3. Select **Pages** from the left sidebar menu under *Code and automation*.
-4. Under **Build and deployment** -> **Source**, select **Deploy from a branch**.
-5. Under **Branch**, select `main` and keep folder as `/ (root)`.
-6. Click **Save**.
-
-### 🌐 Live Site URL
-After 1-2 minutes, your website will be live at:
-`https://<your-username>.github.io/portfolio/`
 
 ---
 
-## 📋 Sanity Checklist for Submission
-
-- [x] Home, About Me, Skills, Projects, Education, Experience, Certifications & Achievements, Resume, and Contact info (with Academic Reference) included.
-- [x] Responsive layout verified on mobile, tablet, and desktop breakpoints.
-- [x] Light and Dark theme toggle working with preference saved.
-- [x] Dynamic data loading from `/data/content.json`.
-- [x] `admin.html` manager functional for content updates.
-- [x] `resume.pdf` downloadable.
-- [x] Zero console runtime errors or broken links.
+##  License
+This project is personal and proprietary to **Pasindu Denuwan**. All rights reserved.

@@ -8,7 +8,7 @@ const filterCategories = [
   { id: "all", label: "All Projects" },
   { id: "web", label: "Web Projects" },
   { id: "uiux", label: "UI / UX Designs" },
-  { id: "mobile", label: "Mobile Apps" },
+  { id: "software", label: "Software" },
   { id: "others", label: "Others" }
 ];
 
@@ -30,7 +30,7 @@ const projects = [
     ],
     githubUrl: "https://github.com/pasindu-denuwan",
     demoUrl: "https://rotaractsusl.org",
-    image: "/assets/web1.png"
+    image: "/assets/web1.webp"
   },
   {
     id: "proj-2",
@@ -38,10 +38,10 @@ const projects = [
     categoryType: "web",
     category: "Web Project",
     description: "The official website of IEEE Computer Society Chapter at Sabaragamuwa University of Sri Lanka.",
-    technologies: ["Java", "OOP Design", "MySQL", "GUI / Swing", "Database Schema"],
+    technologies: ["Next.js", "React 18", "TypeScript 5", "Cloudinary", "Three.js", "Firebase"],
     githubUrl: "https://github.com/pasindu-denuwan",
     demoUrl: "https://www.cschaptersusl.org",
-    image: "/assets/web2.png"
+    image: "/assets/web2.webp"
   },
   {
     id: "proj-3",
@@ -49,42 +49,72 @@ const projects = [
     categoryType: "web",
     category: "Web Project",
     description: "The Official portfolio web site of my self, using Vanilla HTML5, CSS3, and JavaScript.",
-    technologies: ["JavaScript", "REST APIs", "Tailwind CSS", "Data Visualization"],
+    technologies: ["Next.js 14", "React 18", "TypeScript 5", "Tailwind CSS 3", "Node.js"],
     githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/web3.png"
+    image: "/assets/web3.webp"
   },
   {
     id: "proj-4",
-    title: "CRYPTX Designathon Award Concept",
-    categoryType: "uiux",
-    category: "UI / UX Design",
-    description: "Awarded 1st Runner Up in the CRYPTX inter-university designathon. Features an end-to-end user research framework, wireframes, accessible design system, and high-fidelity prototype in Figma.",
-    technologies: ["Figma", "User Research", "Wireframing", "Design System", "Prototyping"],
+    title: "Rotary Club of Uva Hills",
+    categoryType: "web",
+    category: "Web Project",
+    description: "The official website and community platform for the Rotary Club of Uva Hills, Badulla, Sri Lanka.",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase JS", "PostgreSQL"],
     githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/cinnamon.webp"
+    image: "/assets/web4.webp"
   },
   {
     id: "proj-5",
-    title: "Agri-Tech & Estate Management UX Suite",
+    title: "TapMark",
     categoryType: "uiux",
-    category: "UI / UX Prototype",
-    description: "A complete mobile and web interface design concept for agricultural inventory, harvest tracking, and supply chain management with user-tested mobile flows.",
-    technologies: ["Figma", "Interactive UX", "Mobile Design", "Information Architecture"],
-    githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/project4.webp"
+    category: "UI / UX Design",
+    description: "UI design created for the mobile application with 12 interfaces and prototype.",
+    technologies: ["Figma", "Wireframing", "Prototyping"],
+    figmaUrl: "https://www.figma.com/design/FMwugIoj7XZDyUsd0cVchu/TapMark?node-id=0-1&t=AjLXskXIkUI1h9iE-1",
+    image: "/assets/figma1.webp"
   },
   {
     id: "proj-6",
-    title: "Campus Companion & Student Mobile Portal",
-    categoryType: "mobile",
-    category: "Mobile Application",
-    description: "A cross-platform mobile application concept tailored for university students to track lecture schedules, academic grades, faculty notices, and campus events in real time.",
-    technologies: ["React Native", "TypeScript", "Mobile UI", "REST APIs", "Firebase"],
-    githubUrl: "https://github.com/pasindu-denuwan",
-    image: "/assets/project3.webp"
+    title: "CraftLanka",
+    categoryType: "uiux",
+    category: "UI / UX Design",
+    description: "UI / UX designed for the website with prototype. CraftLanka is a website for Sri Lankan wood artists. They can sell their products directly to the foreign market.",
+    technologies: ["Figma", "Interactive UX", "Mobile Design"],
+    figmaUrl: "https://www.figma.com/design/VZNjkuWuPOiz9eqtDAyLXG/Team-nevora?node-id=2-1289&t=GyoXXR3ZLQOmKx6V-1",
+    image: "/assets/figma2.webp"
   },
   {
     id: "proj-7",
+    title: "AgroLink",
+    categoryType: "uiux",
+    category: "UI / UX Design",
+    description: "Web platform for farmers and buyers. This provides a platform to reduce food wastage and enhance the effectiveness of both parties.",
+    technologies: ["Figma", "Interactive UX", "UI / UX Design", "Prototyping"],
+    figmaUrl: "https://www.figma.com/design/LkFBRX9S5aG85LP4o6gGHx/Team-SSD--Devthon2.0?node-id=0-1&t=zFvnQZNGoH1dKUTZ-1",
+    image: "/assets/figma3.webp"
+  },
+  {
+    id: "proj-8",
+    title: "Smart Presence",
+    categoryType: "uiux",
+    category: "UI / UX Design",
+    description: "A Simple UI / UX design for the mobile application with 7 interfaces and prototype.",
+    technologies: ["Figma", "UI / UX Design", "Wireframing", "Prototyping"],
+    figmaUrl: "https://www.figma.com/design/BwrZMrESLKdpcVXfRXL3b8/SmartPresence--Capstone-Project?node-id=0-1&t=E8gfCs5BVhilpK11-1",
+    image: "/assets/figma4.webp"
+  },
+  {
+    id: "proj-9",
+    title: "Campus One Digital Academy",
+    categoryType: "software",
+    category: "Software",
+    description: "A desktop software application built with C# Windows Forms and Microsoft SQL Server.",
+    technologies: ["C#", "SQL", ".NET Framework 4.8"],
+    githubUrl: "https://github.com/pasindu-denuwan/Campus-One-Digital-Academy",
+    image: "/assets/soft1.webp"
+  },
+  {
+    id: "proj-10",
     title: "Pong Arcade Game & 2D Physics Engine",
     categoryType: "others",
     category: "C++ Game Engine",
@@ -117,7 +147,7 @@ export default function Projects() {
     <section id="projects" className="py-14 md:py-16 px-6 md:px-12 relative z-10">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -145,11 +175,10 @@ export default function Projects() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveCategory(tab.id)}
-                    className={`px-4 py-1.5 rounded-xl text-xs font-bold transition-all duration-300 ${
-                      isActive
-                        ? "bg-primary text-white border border-secondary shadow-[0_0_20px_rgba(27,44,193,0.6)] scale-105"
-                        : "glass-panel text-secondary hover:text-white hover:border-accent/40"
-                    }`}
+                    className={`px-4 py-1.5 rounded-xl text-xs font-bold transition-all duration-300 ${isActive
+                      ? "bg-primary text-white border border-secondary shadow-[0_0_20px_rgba(27,44,193,0.6)] scale-105"
+                      : "glass-panel text-secondary hover:text-white hover:border-accent/40"
+                      }`}
                   >
                     {tab.label}
                   </button>
@@ -203,15 +232,15 @@ export default function Projects() {
         </div>
 
         {/* Bottom CTA */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <a 
-            href="https://github.com/pasindu-denuwan" 
-            target="_blank" 
+          <a
+            href="https://github.com/pasindu-denuwan"
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-primary/20 hover:bg-primary/40 border border-primary/40 hover:border-accent text-accent font-bold text-sm transition-all shadow-[0_0_20px_rgba(27,44,193,0.3)] group"
           >

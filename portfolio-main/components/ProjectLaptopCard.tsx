@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, ExternalLink, Code, Sparkles, X } from "lucide-react";
+import { Github, ExternalLink, Code, Sparkles, X, Figma } from "lucide-react";
 
 interface ProjectProps {
   title: string;
@@ -9,12 +9,13 @@ interface ProjectProps {
   technologies: string[];
   githubUrl?: string;
   demoUrl?: string;
+  figmaUrl?: string;
   category?: string;
   image?: string;
 }
 
 export default function ProjectLaptopCard({
-  title, description, technologies, githubUrl, demoUrl, category, image
+  title, description, technologies, githubUrl, demoUrl, figmaUrl, category, image
 }: ProjectProps) {
   const [imgError, setImgError] = useState(false);
   const [showFullDesc, setShowFullDesc] = useState(false);
@@ -96,18 +97,16 @@ export default function ProjectLaptopCard({
             >
               {description}
             </div>
-            {description.length > 90 && (
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setShowFullDesc(true);
-                }}
-                className="text-[10px] text-accent hover:text-white font-medium hover:underline inline-flex items-center mt-0.5 transition-colors cursor-pointer"
-              >
-                Read full
-              </button>
-            )}
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowFullDesc(true);
+              }}
+              className="text-[10px] text-accent hover:text-white font-medium hover:underline inline-flex items-center mt-0.5 transition-colors cursor-pointer"
+            >
+              Read full
+            </button>
           </div>
         </div>
 
@@ -119,18 +118,37 @@ export default function ProjectLaptopCard({
                 key={tech} 
                 className="px-2 py-0.5 bg-dark/60 border border-primary/25 text-white/90 text-[10px] font-medium rounded-md"
               >
-                {tech}
+                {tech.trim()}
               </span>
             ))}
             {technologies.length > 4 && (
-              <span className="px-1.5 py-0.5 bg-primary/20 text-accent text-[10px] font-medium rounded-md">
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowFullDesc(true);
+                }}
+                className="px-1.5 py-0.5 bg-primary/20 hover:bg-primary/40 hover:text-white text-accent text-[10px] font-medium rounded-md transition-colors cursor-pointer"
+                title="View all technologies"
+              >
                 +{technologies.length - 4}
-              </span>
+              </button>
             )}
           </div>
 
           {/* Action Links */}
           <div className="flex items-center gap-2.5 pt-2.5 border-t border-primary/15">
+            {figmaUrl && (
+              <a 
+                href={figmaUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/20 hover:bg-primary/40 border border-primary/40 text-accent hover:text-white text-[11px] font-bold transition-all"
+              >
+                <Figma className="w-3 h-3 text-[#F24E1E]" />
+                <span>Figma Link</span>
+              </a>
+            )}
             {githubUrl && (
               <a 
                 href={githubUrl} 
@@ -156,53 +174,114 @@ export default function ProjectLaptopCard({
           </div>
         </div>
 
-        {/* Full Description Overlay inside card - Zero card size change */}
+        {/* Full Details Overlay (Description + Technologies) - Inside Card */}
         <AnimatePresence>
           {showFullDesc && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.18, ease: "easeOut" }}
               className="absolute inset-0 bg-dark/95 backdrop-blur-xl p-4 sm:p-5 rounded-2xl z-30 flex flex-col justify-between border border-secondary/40 shadow-2xl"
             >
               <div
-                className="space-y-2 overflow-y-auto pr-1"
+                className="space-y-3 overflow-y-auto pr-1 flex-1"
                 style={{
                   scrollbarWidth: "thin",
                   scrollbarColor: "rgba(118, 146, 255, 0.4) transparent",
                 }}
               >
-                <div className="flex items-center justify-between pb-1 border-b border-primary/20">
-                  <span className="text-[10px] font-bold text-accent uppercase tracking-wider truncate max-w-[200px]">
-                    {title}
-                  </span>
+                {/* Header with Category, Title and Close X */}
+                <div className="flex items-center justify-between pb-2 border-b border-primary/20">
+                  <div className="flex items-center gap-1.5 min-w-0 pr-2">
+                    {category && (
+                      <span className="px-2 py-0.5 rounded-full bg-primary/25 border border-primary/40 text-accent text-[9px] font-bold uppercase tracking-wider flex-shrink-0">
+                        {category}
+                      </span>
+                    )}
+                    <span className="text-xs font-bold text-white truncate">
+                      {title}
+                    </span>
+                  </div>
                   <button
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
                       setShowFullDesc(false);
                     }}
-                    className="w-5 h-5 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+                    className="w-5 h-5 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors flex-shrink-0 cursor-pointer"
                     aria-label="Close"
                   >
                     <X className="w-3 h-3" />
                   </button>
                 </div>
-                <p className="text-white/90 text-xs leading-relaxed pt-1">
-                  {description}
-                </p>
+
+                {/* Description */}
+                <div className="space-y-1">
+                  <span className="text-[10px] font-semibold text-secondary/70 uppercase tracking-wider block">
+                    Description
+                  </span>
+                  <p className="text-white/90 text-xs leading-relaxed select-text">
+                    {description}
+                  </p>
+                </div>
+
+                {/* Technologies List - All Tech Badges */}
+                <div className="space-y-1.5 pt-2 border-t border-primary/15">
+                  <span className="text-[10px] font-semibold text-secondary/70 uppercase tracking-wider block">
+                    Technologies ({technologies.length})
+                  </span>
+                  <div className="flex flex-wrap gap-1">
+                    {technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-0.5 bg-dark/80 border border-primary/30 text-accent text-[10px] font-medium rounded-md shadow-sm"
+                      >
+                        {tech.trim()}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setShowFullDesc(false);
-                }}
-                className="text-[11px] font-semibold text-secondary hover:text-accent text-center pt-2 border-t border-primary/20 transition-colors cursor-pointer"
-              >
-                Close
-              </button>
+
+              {/* Action Buttons */}
+              {(figmaUrl || githubUrl || demoUrl) && (
+                <div className="flex items-center gap-2 pt-2.5 mt-2 border-t border-primary/20">
+                  {figmaUrl && (
+                    <a
+                      href={figmaUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-primary/20 hover:bg-primary/40 border border-primary/40 text-accent hover:text-white text-[10px] font-bold transition-all"
+                    >
+                      <Figma className="w-2.5 h-2.5 text-[#F24E1E]" />
+                      <span>Figma Link</span>
+                    </a>
+                  )}
+                  {githubUrl && (
+                    <a
+                      href={githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-primary/20 hover:bg-primary/40 border border-primary/40 text-accent hover:text-white text-[10px] font-bold transition-all"
+                    >
+                      <Github className="w-3 h-3" />
+                      <span>Source</span>
+                    </a>
+                  )}
+                  {demoUrl && (
+                    <a
+                      href={demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-primary/20 hover:bg-primary/40 border border-primary/40 text-accent hover:text-white text-[10px] font-bold transition-all"
+                    >
+                      <ExternalLink className="w-2.5 h-2.5" />
+                      <span>Demo</span>
+                    </a>
+                  )}
+                </div>
+              )}
             </motion.div>
           )}
         </AnimatePresence>
