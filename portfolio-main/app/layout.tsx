@@ -10,10 +10,8 @@ export const metadata: Metadata = {
     icon: [
       { url: pdIconDataUri, type: "image/svg+xml" },
       { url: "/icon.svg?v=4", type: "image/svg+xml" },
-      { url: "/icon.png?v=4", type: "image/png" },
       { url: "/favicon.ico?v=4" },
     ],
-    apple: "/apple-icon.png?v=4",
   },
 };
 
@@ -27,9 +25,8 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/svg+xml" href={pdIconDataUri} />
         <link rel="shortcut icon" href={pdIconDataUri} />
-        <link rel="icon" href="/icon.png?v=4" type="image/png" />
+        <link rel="icon" href="/icon.svg?v=4" type="image/svg+xml" />
         <link rel="alternate icon" href="/favicon.ico?v=4" />
-        <link rel="apple-touch-icon" href="/apple-icon.png?v=4" />
       </head>
       <body className="relative min-h-screen bg-dark text-accent overflow-x-hidden">
         {children}
